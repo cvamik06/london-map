@@ -3,21 +3,20 @@ import Dashboard from './components/Dashboard';
 import MapView from './components/MapView';
 
 function App() {
-  // The global state that connects the Dashboard and the Map
   const [selectedCluster, setSelectedCluster] = useState('C1');
+  // NEW STATE: Tracks whether K-Means or DBSCAN is active
+  const [activeModel, setActiveModel] = useState('kmeans');
 
   return (
-    <div style={{ 
-      display: 'flex', 
-      height: '100vh', 
-      width: '100vw', 
-      backgroundColor: '#f5f5f5',
-      fontFamily: 'system-ui, sans-serif'
-    }}>
+    <div style={{ display: 'flex', height: '100vh', width: '100vw', backgroundColor: '#f5f5f5', fontFamily: 'system-ui, sans-serif' }}>
+      
       {/* Left Panel: The Map */}
       <div style={{ flex: 1, padding: '20px' }}>
         <div style={{ height: '100%', boxShadow: '0 4px 6px rgba(0,0,0,0.1)', borderRadius: '8px' }}>
-          <MapView selectedCluster={selectedCluster} />
+          <MapView 
+            selectedCluster={selectedCluster} 
+            activeModel={activeModel} 
+          />
         </div>
       </div>
 
@@ -26,6 +25,8 @@ function App() {
         <Dashboard 
           selectedCluster={selectedCluster} 
           setSelectedCluster={setSelectedCluster} 
+          activeModel={activeModel}          // Pass state down
+          setActiveModel={setActiveModel}    // Pass the setter function down
         />
       </div>
     </div>

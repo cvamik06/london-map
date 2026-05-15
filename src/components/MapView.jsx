@@ -1,14 +1,12 @@
-import React, { useMemo, useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
 import Map, { Source, Layer, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-// Ensure you replace this with your actual Mapbox token
-const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN; 
+const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 
-export default function MapView({ selectedCluster }) {
+// Make sure activeModel is being received as a prop here!
+export default function MapView({ selectedCluster, activeModel }) {
   const activeClusterId = parseInt(selectedCluster.replace('C', ''));
-  
-  // NEW STATE: Track the hovered neighborhood
   const [hoverInfo, setHoverInfo] = useState(null);
 
   const clusterColors = {
@@ -19,69 +17,93 @@ export default function MapView({ selectedCluster }) {
     4: '#d62728'
   };
 
-  const dataLayer = useMemo(() => ({
-    id: 'lsoa-clusters',
+// --- LAYER 1: K-MEANS ---
+  const kmeansLayer = {
+    id: 'kmeans-layer', 
     type: 'fill',
+    layout: {
+      visibility: activeModel === 'kmeans' ? 'visible' : 'none'
+    },
     paint: {
       'fill-color': [
         'match',
-        ['get', 'cluster'],
-        0, clusterColors[0],
-        1, clusterColors[1],
-        2, clusterColors[2],
-        3, clusterColors[3],
-        4, clusterColors[4],
+        ['get', 'kmeans_cluster'],
+        0, clusterColors[0], 1, clusterColors[1], 2, clusterColors[2], 3, clusterColors[3], 4, clusterColors[4],
         '#cccccc'
       ],
       'fill-opacity': [
         'case',
-        ['==', ['get', 'cluster'], activeClusterId],
-        0.8, 
-        0.2  
+        // Highlight selected cluster
+        ['==', ['get', 'kmeans_cluster'], activeClusterId], 0.8, 
+        // Dim unselected clusters (so you keep the context)
+        0.15 
       ],
-      'fill-outline-color': '#ffffff'
+      'fill-outline-color': [
+        'case',
+        // Solid white for selected, faint translucent white for unselected
+        ['==', ['get', 'kmeans_cluster'], activeClusterId], '#ffffff',
+        'rgba(255,255,255,0.1)'
+      ]
     }
-  }), [activeClusterId]);
+  };
 
-  // NEW FUNCTION: Handle the mouse hover event
+  // --- LAYER 2: DBSCAN ---
+  const dbscanLayer = {
+    id: 'dbscan-layer', 
+    type: 'fill',
+    layout: {
+      visibility: activeModel === 'dbscan' ? 'visible' : 'none'
+    },
+    paint: {
+      'fill-color': [
+        'match',
+        ['get', 'dbscan_cluster'],
+        0, clusterColors[0], 1, clusterColors[1], 2, clusterColors[2], 3, clusterColors[3], 4, clusterColors[4],
+        -1, '#b0b0b0',
+        '#cccccc'
+      ],
+      'fill-opacity': [
+        'case',
+        // Highlight selected hotspot
+        ['==', ['get', 'dbscan_cluster'], activeClusterId], 0.9, 
+        // Dim unselected hotspots and noise
+        0.15 
+      ],
+      'fill-outline-color': [
+        'case',
+        ['==', ['get', 'dbscan_cluster'], activeClusterId], '#ffffff',
+        'rgba(255,255,255,0.1)'
+      ]
+    }
+  };
+
   const onHover = useCallback(event => {
-    const {
-      features,
-      lngLat: { lng, lat }
-    } = event;
+    const { features, lngLat: { lng, lat } } = event;
     const hoveredFeature = features && features[0];
-
     if (hoveredFeature) {
-      setHoverInfo({
-        longitude: lng,
-        latitude: lat,
-        properties: hoveredFeature.properties
-      });
+      setHoverInfo({ longitude: lng, latitude: lat, properties: hoveredFeature.properties });
     } else {
       setHoverInfo(null);
     }
   }, []);
 
   return (
-    <div style={{ position: 'relative', height: '100%', width: '100%', borderRadius: '8px', overflow: 'hidden' }}>
+    <div style={{ position: 'relative', height: '100%', width: '100%', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#e5e5e5' }}>
       <Map
-        initialViewState={{
-          longitude: -0.1276,
-          latitude: 51.5072,
-          zoom: 9.5
-        }}
+        initialViewState={{ longitude: -0.1276, latitude: 51.5072, zoom: 9.5 }}
         style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
         mapStyle="mapbox://styles/mapbox/light-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
-        interactiveLayerIds={['lsoa-clusters']} // Tells Mapbox which layer to track for hover events
+        interactiveLayerIds={activeModel === 'kmeans' ? ['kmeans-layer'] : ['dbscan-layer']}
         onMouseMove={onHover}
         onMouseLeave={() => setHoverInfo(null)}
       >
-        <Source type="geojson" data="/map_data_clustered.geojson">
-          <Layer {...dataLayer} />
+        <Source type="geojson" data="/map_data_multi_model.geojson">
+          {/* Mount both layers permanently. Mapbox visibility rules will hide the inactive one. */}
+          <Layer {...kmeansLayer} />
+          <Layer {...dbscanLayer} />
         </Source>
 
-        {/* NEW: The Tooltip Popup */}
         {hoverInfo && (
           <Popup
             longitude={hoverInfo.longitude}
@@ -92,24 +114,36 @@ export default function MapView({ selectedCluster }) {
             offset={15}
             style={{ padding: '0', zIndex: 10 }}
           >
-            <div style={{ padding: '10px', fontFamily: 'system-ui, sans-serif', fontSize: '13px' }}>
+            <div style={{ padding: '10px', fontFamily: 'system-ui, sans-serif', fontSize: '13px', width: '200px' }}>
               <h4 style={{ margin: '0 0 8px 0', borderBottom: '1px solid #eee', paddingBottom: '4px' }}>
                 {hoverInfo.properties['LSOA name (2021)']}
               </h4>
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
-                <div>
-                  <div style={{ color: '#666', fontSize: '11px' }}>Harm / 1000</div>
-                  <div style={{ fontWeight: 'bold', color: '#d32f2f' }}>
-                    {Math.round(hoverInfo.properties['Harm_per_1000']).toLocaleString()}
+              
+              {activeModel === 'kmeans' ? (
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
+                  <div>
+                    <div style={{ color: '#666', fontSize: '11px' }}>Harm / 1000</div>
+                    <div style={{ fontWeight: 'bold', color: '#d32f2f' }}>{Math.round(hoverInfo.properties['Harm_per_1000']).toLocaleString()}</div>
+                  </div>
+                  <div>
+                    <div style={{ color: '#666', fontSize: '11px' }}>IMD Score</div>
+                    <div style={{ fontWeight: 'bold' }}>{Math.round(hoverInfo.properties['Index of Multiple Deprivation (IMD) Score'])}</div>
                   </div>
                 </div>
+              ) : (
                 <div>
-                  <div style={{ color: '#666', fontSize: '11px' }}>IMD Score</div>
-                  <div style={{ fontWeight: 'bold' }}>
-                    {Math.round(hoverInfo.properties['Index of Multiple Deprivation (IMD) Score'])}
+                  <div style={{ color: '#666', fontSize: '11px', marginBottom: '4px' }}>Deployment Strategy</div>
+                  <div style={{ 
+                    fontWeight: 'bold', 
+                    color: hoverInfo.properties['dbscan_cluster'] === -1 ? '#666' : '#d32f2f',
+                    backgroundColor: hoverInfo.properties['dbscan_cluster'] === -1 ? '#f5f5f5' : '#ffebee',
+                    padding: '4px 8px',
+                    borderRadius: '4px'
+                  }}>
+                    {hoverInfo.properties['allocation_type']}
                   </div>
                 </div>
-              </div>
+              )}
             </div>
           </Popup>
         )}
