@@ -92,17 +92,21 @@ export default function MapView({ selectedCluster, activeModel }) {
       <Map
         initialViewState={{ longitude: -0.1276, latitude: 51.5072, zoom: 9.5 }}
         
-        // 1. Lock the panning area to the UK bounding box [Southwest, Northeast]
+        // 1. Lock the panning area to Greater London
         maxBounds={[
-          [-0.8, 51.2], // Southwest corner of Greater London
-          [0.5, 51.8]   // Northeast corner of Greater London
+          [-0.8, 51.2], 
+          [0.5, 51.8]   
         ]}
-        minZoom={8.5} // Keep them tightly zoomed in on the city
+        minZoom={8.5} 
         
         style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
         mapStyle="mapbox://styles/mapbox/light-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
-        // ... (keep your interactiveLayerIds, onMouseMove, etc. exactly the same)
+        
+        // 2. THESE ARE THE 3 LINES THAT FIX THE TOOLTIPS!
+        interactiveLayerIds={activeModel === 'kmeans' ? ['kmeans-layer'] : ['dbscan-layer']}
+        onMouseMove={onHover}
+        onMouseLeave={() => setHoverInfo(null)}
       >
         <Source type="geojson" data="/map_data_multi_model.geojson">
           {/* Mount both layers permanently. Mapbox visibility rules will hide the inactive one. */}
