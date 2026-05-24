@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
 import { ShieldAlert, Info, AlertTriangle } from 'lucide-react';
 import { clusterProfiles } from '../data/clusterData';
+import { cityConfigs } from '../data/cityConfig'; // <-- IMPORT ADDED HERE
 
-export default function Dashboard({ selectedCluster, setSelectedCluster, activeModel, setActiveModel }) {
+export default function Dashboard({ selectedCity, setSelectedCity, selectedCluster, setSelectedCluster, activeModel, setActiveModel }) {
   const [viewMode, setViewMode] = useState('harm'); 
   const activeData = clusterProfiles[selectedCluster];
 
@@ -22,6 +23,20 @@ export default function Dashboard({ selectedCluster, setSelectedCluster, activeM
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
       <h2>Metropolitan Police Analytical Dashboard</h2>
       
+      {/* ---------------- NEW CITY SELECTOR DROPDOWN ---------------- */}
+      <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <strong style={{ color: '#495057' }}>Select Jurisdiction:</strong>
+        <select 
+          value={selectedCity} 
+          onChange={(e) => setSelectedCity(e.target.value)}
+          style={{ padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+        >
+          {Object.keys(cityConfigs).map(city => (
+            <option key={city} value={city}>{city} </option>
+          ))}
+        </select>
+      </div>
+
       {/* ---------------- THE MODEL TOGGLE ---------------- */}
       <div style={{ marginBottom: '25px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', display: 'flex', gap: '15px', alignItems: 'center' }}>
         <strong style={{ color: '#495057' }}>Clustering Algorithm:</strong>
@@ -104,7 +119,7 @@ export default function Dashboard({ selectedCluster, setSelectedCluster, activeM
         </>
       ) : (
         /* ----- DBSCAN VIEW (Summary) ----- */
-<div style={{ padding: '20px', backgroundColor: '#fafafa', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
+        <div style={{ padding: '20px', backgroundColor: '#fafafa', borderRadius: '8px', border: '1px solid #e0e0e0' }}>
           
           <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '25px' }}>
             <ShieldAlert size={48} color="#d32f2f" />
@@ -134,7 +149,6 @@ export default function Dashboard({ selectedCluster, setSelectedCluster, activeM
                   borderLeft: `6px solid ${zone.color}`, 
                   cursor: 'pointer',
                   transition: 'all 0.2s',
-                  // Highlight the selected zone, dim the unselected ones
                   boxShadow: selectedCluster === zone.id ? '0 4px 12px rgba(0,0,0,0.15)' : '0 2px 4px rgba(0,0,0,0.05)',
                   opacity: selectedCluster === zone.id ? 1 : 0.5,
                   transform: selectedCluster === zone.id ? 'scale(1.02)' : 'scale(1)'
