@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Map, { Source, Layer, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { cityConfigs } from '../data/cityConfig'; 
@@ -8,9 +8,35 @@ const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 export default function MapView({ selectedCity, selectedCluster, activeModel }) {
   const activeClusterId = parseInt(selectedCluster.replace('C', ''));
   const [hoverInfo, setHoverInfo] = useState(null);
-
-  // Get the specific coordinates for the chosen city, default to London
+  
+  const [mapData, setMapData] = useState(null);
   const cityData = cityConfigs[selectedCity] || cityConfigs["London"];
+
+  useEffect(() => {
+    Promise.all([
+      fetch('/LSOA_Boundaries.geojson').then(res => res.json()), 
+      fetch('/cluster_data.json').then(res => res.json())        
+    ])
+    .then(([geojsonData, clusterData]) => {
+      geojsonData.features = geojsonData.features.map(feature => {
+        const lsoaCode = feature.properties.LSOA21CD; 
+        
+        // FIX: Removed the default 0 so empty areas stay empty!
+        const stats = clusterData[lsoaCode] || { kmeans_cluster: null, dbscan_cluster: null, City_Group: 'None' };
+        
+        return {
+          ...feature,
+          properties: {
+            ...feature.properties,
+            ...stats 
+          }
+        };
+      });
+
+      setMapData(geojsonData);
+    })
+    .catch(err => console.error("Error loading map data:", err));
+  }, []);
 
   const clusterColors = {
     0: '#1f77b4', 1: '#ff7f0e', 2: '#2ca02c', 3: '#9467bd', 4: '#d62728'
@@ -19,6 +45,8 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
   const kmeansLayer = {
     id: 'kmeans-layer', 
     type: 'fill',
+    // NEW: Only render polygons that belong to the selected city!
+    filter: ['==', ['get', 'City_Group'], selectedCity],
     layout: { visibility: activeModel === 'kmeans' ? 'visible' : 'none' },
     paint: {
       'fill-color': ['match', ['get', 'kmeans_cluster'], 0, clusterColors[0], 1, clusterColors[1], 2, clusterColors[2], 3, clusterColors[3], 4, clusterColors[4], '#cccccc'],
@@ -30,6 +58,8 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
   const dbscanLayer = {
     id: 'dbscan-layer', 
     type: 'fill',
+    // NEW: Only render polygons that belong to the selected city!
+    filter: ['==', ['get', 'City_Group'], selectedCity],
     layout: { visibility: activeModel === 'dbscan' ? 'visible' : 'none' },
     paint: {
       'fill-color': ['match', ['get', 'dbscan_cluster'], 0, clusterColors[0], 1, clusterColors[1], 2, clusterColors[2], 3, clusterColors[3], 4, clusterColors[4], -1, '#b0b0b0', '#cccccc'],
@@ -53,15 +83,8 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
       <Map
         key={selectedCity} 
         initialViewState={cityData.center} 
-        
-        // Generous bounds covering just the UK and Ireland to prevent crash loops
-        maxBounds={[
-          [-11.0, 49.5], 
-          [3.0, 61.0]    
-        ]}
-        // Lowered minZoom to support smaller laptop screens
+        maxBounds={[ [-11.0, 49.5], [3.0, 61.0] ]}
         minZoom={5}
-        
         style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}
         mapStyle="mapbox://styles/mapbox/light-v11"
         mapboxAccessToken={MAPBOX_TOKEN}
@@ -69,10 +92,12 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
         onMouseMove={onHover}
         onMouseLeave={() => setHoverInfo(null)}
       >
-        <Source type="geojson" data="/map_data_multi_model.geojson">
-          <Layer {...kmeansLayer} />
-          <Layer {...dbscanLayer} />
-        </Source>
+        {mapData && (
+          <Source type="geojson" data={mapData}>
+            <Layer {...kmeansLayer} />
+            <Layer {...dbscanLayer} />
+          </Source>
+        )}
 
         {hoverInfo && (
           <Popup
@@ -86,7 +111,7 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
           >
             <div style={{ padding: '10px', fontFamily: 'system-ui, sans-serif', fontSize: '13px', width: '200px' }}>
               <h4 style={{ margin: '0 0 8px 0', borderBottom: '1px solid #eee', paddingBottom: '4px' }}>
-                {hoverInfo.properties['LSOA name (2021)']}
+                {hoverInfo.properties['LSOA name (2021)'] || hoverInfo.properties['LSOA Name'] || "Unknown Neighborhood"}
               </h4>
               
               {activeModel === 'kmeans' ? (
@@ -110,7 +135,7 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
                     padding: '4px 8px',
                     borderRadius: '4px'
                   }}>
-                    {hoverInfo.properties['allocation_type'] || 'Standard Patrol'}
+                    {hoverInfo.properties['dbscan_cluster'] === -1 ? 'Standard Patrol' : 'Targeted Taskforce'}
                   </div>
                 </div>
               )}
