@@ -1,0 +1,7358 @@
+  {
+  "Birmingham": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 155898.62,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.7,
+            "volume": 50.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.0,
+            "volume": 2.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 4.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 8.8
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.8,
+            "volume": 2.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 53.16
+          },
+          {
+            "name": "Income",
+            "value": 0.58
+          },
+          {
+            "name": "Health",
+            "value": 1.13
+          },
+          {
+            "name": "Education",
+            "value": 49.32
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 90739.16,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.1,
+            "volume": 47.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.1,
+            "volume": 7.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.0,
+            "volume": 1.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.5,
+            "volume": 6.4
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.3,
+            "volume": 1.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 22.66
+          },
+          {
+            "name": "Income",
+            "value": 0.26
+          },
+          {
+            "name": "Health",
+            "value": 0.43
+          },
+          {
+            "name": "Education",
+            "value": 16.05
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 147740.89,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.4,
+            "volume": 47.2
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.9,
+            "volume": 2.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.3,
+            "volume": 4.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.0,
+            "volume": 2.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 8.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 64.57
+          },
+          {
+            "name": "Income",
+            "value": 0.7
+          },
+          {
+            "name": "Health",
+            "value": 1.2
+          },
+          {
+            "name": "Education",
+            "value": 62.12
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 79069.35,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.4,
+            "volume": 41.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.7,
+            "volume": 7.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.4,
+            "volume": 1.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 7.2
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.9,
+            "volume": 1.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.45
+          },
+          {
+            "name": "Income",
+            "value": 0.2
+          },
+          {
+            "name": "Health",
+            "value": 0.13
+          },
+          {
+            "name": "Education",
+            "value": 13.75
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 229468.23,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 75.6,
+            "volume": 28.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 5.6,
+            "volume": 2.1
+          },
+          {
+            "name": "Robbery",
+            "harm": 4.8,
+            "volume": 3.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.5,
+            "volume": 4.0
+          },
+          {
+            "name": "Theft",
+            "harm": 3.1,
+            "volume": 30.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 28.02
+          },
+          {
+            "name": "Income",
+            "value": 0.29
+          },
+          {
+            "name": "Health",
+            "value": 0.53
+          },
+          {
+            "name": "Education",
+            "value": 22.29
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 158623.64,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.5,
+            "volume": 47.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.3,
+            "volume": 2.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.6,
+            "volume": 4.7
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.1,
+            "volume": 2.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 8.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 52.22
+          },
+          {
+            "name": "Income",
+            "value": 0.57
+          },
+          {
+            "name": "Health",
+            "value": 1.12
+          },
+          {
+            "name": "Education",
+            "value": 48.66
+          }
+        ]
+      }
+    }
+  },
+  "Brighton and Hove": {
+    "dbscan": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 66033.61,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.2,
+            "volume": 34.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 3.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.1,
+            "volume": 1.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.8,
+            "volume": 20.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 7.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 16.49
+          },
+          {
+            "name": "Income",
+            "value": 0.19
+          },
+          {
+            "name": "Health",
+            "value": -0.08
+          },
+          {
+            "name": "Education",
+            "value": 12.5
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 156100.96,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.2,
+            "volume": 44.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.1,
+            "volume": 2.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.6,
+            "volume": 3.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 8.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.1,
+            "volume": 18.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 62.0
+          },
+          {
+            "name": "Income",
+            "value": 0.59
+          },
+          {
+            "name": "Health",
+            "value": 1.55
+          },
+          {
+            "name": "Education",
+            "value": 80.14
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 105560.27,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.6,
+            "volume": 44.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 8.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.3,
+            "volume": 19.8
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.0,
+            "volume": 4.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.9,
+            "volume": 0.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 46.37
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.19
+          },
+          {
+            "name": "Education",
+            "value": 55.84
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 50911.59,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.1,
+            "volume": 35.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.9,
+            "volume": 3.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.7,
+            "volume": 19.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.6,
+            "volume": 8.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 12.28
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": -0.35
+          },
+          {
+            "name": "Education",
+            "value": 8.99
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 199415.53,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 77.2,
+            "volume": 25.2
+          },
+          {
+            "name": "Theft",
+            "harm": 3.7,
+            "volume": 31.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.6,
+            "volume": 1.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.3,
+            "volume": 2.5
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.2,
+            "volume": 4.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.22
+          },
+          {
+            "name": "Income",
+            "value": 0.2
+          },
+          {
+            "name": "Health",
+            "value": 0.12
+          },
+          {
+            "name": "Education",
+            "value": 13.08
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 118045.71,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.9,
+            "volume": 40.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.5,
+            "volume": 2.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.4,
+            "volume": 8.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.3,
+            "volume": 19.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 41.83
+          },
+          {
+            "name": "Income",
+            "value": 0.43
+          },
+          {
+            "name": "Health",
+            "value": 1.05
+          },
+          {
+            "name": "Education",
+            "value": 50.94
+          }
+        ]
+      }
+    }
+  },
+  "Bristol, City of": {
+    "dbscan": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 115137.44,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.9,
+            "volume": 39.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 3.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 7.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.9,
+            "volume": 15.4
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.5,
+            "volume": 1.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 23.49
+          },
+          {
+            "name": "Income",
+            "value": 0.24
+          },
+          {
+            "name": "Health",
+            "value": 0.36
+          },
+          {
+            "name": "Education",
+            "value": 27.38
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 228760.69,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.1,
+            "volume": 45.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.2,
+            "volume": 19.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.1,
+            "volume": 2.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 7.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 64.52
+          },
+          {
+            "name": "Income",
+            "value": 0.59
+          },
+          {
+            "name": "Health",
+            "value": 1.64
+          },
+          {
+            "name": "Education",
+            "value": 77.81
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 195826.98,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 78.7,
+            "volume": 27.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.4,
+            "volume": 3.6
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.9,
+            "volume": 2.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.8,
+            "volume": 16.9
+          },
+          {
+            "name": "Theft",
+            "harm": 2.8,
+            "volume": 25.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 20.45
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": 0.37
+          },
+          {
+            "name": "Education",
+            "value": 17.47
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 92451.59,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.6,
+            "volume": 40.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.7,
+            "volume": 4.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 8.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.8,
+            "volume": 14.4
+          },
+          {
+            "name": "Public Order",
+            "harm": 1.3,
+            "volume": 9.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 15.53
+          },
+          {
+            "name": "Income",
+            "value": 0.16
+          },
+          {
+            "name": "Health",
+            "value": 0.02
+          },
+          {
+            "name": "Education",
+            "value": 16.18
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 41869.13,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.0,
+            "volume": 24.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 9.8,
+            "volume": 7.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 4.0,
+            "volume": 10.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.2,
+            "volume": 12.3
+          },
+          {
+            "name": "Theft",
+            "harm": 2.1,
+            "volume": 18.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 6.28
+          },
+          {
+            "name": "Income",
+            "value": 0.06
+          },
+          {
+            "name": "Health",
+            "value": -0.89
+          },
+          {
+            "name": "Education",
+            "value": 2.69
+          }
+        ]
+      },
+      "C3": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 54208.91,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 42.8,
+            "volume": 4.0
+          },
+          {
+            "name": "Theft",
+            "harm": 33.3,
+            "volume": 80.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 12.0,
+            "volume": 2.6
+          },
+          {
+            "name": "Robbery",
+            "harm": 4.8,
+            "volume": 0.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.2,
+            "volume": 2.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 6.43
+          },
+          {
+            "name": "Income",
+            "value": 0.06
+          },
+          {
+            "name": "Health",
+            "value": -0.78
+          },
+          {
+            "name": "Education",
+            "value": 0.73
+          }
+        ]
+      },
+      "C4": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 175125.71,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.3,
+            "volume": 40.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.8,
+            "volume": 3.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 7.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.0,
+            "volume": 16.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.7,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 43.71
+          },
+          {
+            "name": "Income",
+            "value": 0.43
+          },
+          {
+            "name": "Health",
+            "value": 1.07
+          },
+          {
+            "name": "Education",
+            "value": 55.8
+          }
+        ]
+      }
+    }
+  },
+  "Coventry": {
+    "dbscan": {
+      "C0": {
+        "name": "Very Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 97404.4,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 81.8,
+            "volume": 42.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 7.5,
+            "volume": 9.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.3,
+            "volume": 1.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 8.9
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.5,
+            "volume": 1.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 34.13
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 0.93
+          },
+          {
+            "name": "Education",
+            "value": 38.28
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 112658.4,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.5,
+            "volume": 46.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.7,
+            "volume": 1.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 4.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.0,
+            "volume": 4.2
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.0,
+            "volume": 2.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 54.49
+          },
+          {
+            "name": "Income",
+            "value": 0.61
+          },
+          {
+            "name": "Health",
+            "value": 1.17
+          },
+          {
+            "name": "Education",
+            "value": 47.93
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 110526.47,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.0,
+            "volume": 49.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.1,
+            "volume": 5.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.6,
+            "volume": 11.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.4,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.1,
+            "volume": 11.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 30.09
+          },
+          {
+            "name": "Income",
+            "value": 0.34
+          },
+          {
+            "name": "Health",
+            "value": 0.86
+          },
+          {
+            "name": "Education",
+            "value": 24.53
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 66181.73,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 74.8,
+            "volume": 24.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 8.8,
+            "volume": 6.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.8,
+            "volume": 1.2
+          },
+          {
+            "name": "Theft",
+            "harm": 3.6,
+            "volume": 30.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.5,
+            "volume": 1.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 12.04
+          },
+          {
+            "name": "Income",
+            "value": 0.13
+          },
+          {
+            "name": "Health",
+            "value": -0.1
+          },
+          {
+            "name": "Education",
+            "value": 11.43
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 175332.74,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.6,
+            "volume": 40.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.1,
+            "volume": 1.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.8,
+            "volume": 4.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.4,
+            "volume": 2.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 7.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.76
+          },
+          {
+            "name": "Income",
+            "value": 0.47
+          },
+          {
+            "name": "Health",
+            "value": 1.27
+          },
+          {
+            "name": "Education",
+            "value": 44.58
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 73651.94,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.7,
+            "volume": 40.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.6,
+            "volume": 6.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 8.2
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.3,
+            "volume": 1.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 18.44
+          },
+          {
+            "name": "Income",
+            "value": 0.21
+          },
+          {
+            "name": "Health",
+            "value": 0.29
+          },
+          {
+            "name": "Education",
+            "value": 18.56
+          }
+        ]
+      }
+    }
+  },
+  "Derby": {
+    "dbscan": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 121470.63,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 89.1,
+            "volume": 49.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.1,
+            "volume": 4.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 9.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.4,
+            "volume": 13.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.2,
+            "volume": 0.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 32.69
+          },
+          {
+            "name": "Income",
+            "value": 0.36
+          },
+          {
+            "name": "Health",
+            "value": 0.82
+          },
+          {
+            "name": "Education",
+            "value": 43.58
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 136839.43,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.2,
+            "volume": 39.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 3.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.8,
+            "volume": 1.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 7.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.8,
+            "volume": 3.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 47.03
+          },
+          {
+            "name": "Income",
+            "value": 0.49
+          },
+          {
+            "name": "Health",
+            "value": 0.82
+          },
+          {
+            "name": "Education",
+            "value": 63.82
+          }
+        ]
+      },
+      "C2": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 166846.37,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.8,
+            "volume": 47.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 10.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 16.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 1.6,
+            "volume": 1.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.6,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.19
+          },
+          {
+            "name": "Income",
+            "value": 0.52
+          },
+          {
+            "name": "Health",
+            "value": 1.18
+          },
+          {
+            "name": "Education",
+            "value": 55.43
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 234988.92,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.7,
+            "volume": 37.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.8,
+            "volume": 1.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.7,
+            "volume": 4.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.5,
+            "volume": 2.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.1,
+            "volume": 16.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.04
+          },
+          {
+            "name": "Income",
+            "value": 0.47
+          },
+          {
+            "name": "Health",
+            "value": 1.15
+          },
+          {
+            "name": "Education",
+            "value": 54.64
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 92885.81,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 89.5,
+            "volume": 48.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.2,
+            "volume": 2.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.7,
+            "volume": 6.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 15.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.6,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.07
+          },
+          {
+            "name": "Income",
+            "value": 0.23
+          },
+          {
+            "name": "Health",
+            "value": 0.25
+          },
+          {
+            "name": "Education",
+            "value": 21.96
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 70418.9,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.4,
+            "volume": 31.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.7,
+            "volume": 4.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.7,
+            "volume": 17.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.3,
+            "volume": 0.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 6.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.69
+          },
+          {
+            "name": "Income",
+            "value": 0.13
+          },
+          {
+            "name": "Health",
+            "value": -0.08
+          },
+          {
+            "name": "Education",
+            "value": 10.86
+          }
+        ]
+      }
+    }
+  },
+  "Leeds": {
+    "dbscan": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 60462.95,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.6,
+            "volume": 43.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 9.5,
+            "volume": 11.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.7,
+            "volume": 6.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 15.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 0.8,
+            "volume": 0.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 7.56
+          },
+          {
+            "name": "Income",
+            "value": 0.09
+          },
+          {
+            "name": "Health",
+            "value": -0.71
+          },
+          {
+            "name": "Education",
+            "value": 6.7
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 93908.48,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.2,
+            "volume": 45.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.1,
+            "volume": 7.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 8.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.5,
+            "volume": 13.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.0,
+            "volume": 0.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.24
+          },
+          {
+            "name": "Income",
+            "value": 0.19
+          },
+          {
+            "name": "Health",
+            "value": 0.09
+          },
+          {
+            "name": "Education",
+            "value": 18.45
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 183764.31,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.4,
+            "volume": 51.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.6,
+            "volume": 4.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 9.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.8,
+            "volume": 1.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.1,
+            "volume": 10.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 42.56
+          },
+          {
+            "name": "Income",
+            "value": 0.42
+          },
+          {
+            "name": "Health",
+            "value": 0.92
+          },
+          {
+            "name": "Education",
+            "value": 48.69
+          }
+        ]
+      },
+      "C3": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 190771.57,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.2,
+            "volume": 45.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.0,
+            "volume": 11.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.7,
+            "volume": 3.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.8,
+            "volume": 16.2
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.8,
+            "volume": 0.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 42.1
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 1.0
+          },
+          {
+            "name": "Education",
+            "value": 51.97
+          }
+        ]
+      },
+      "C4": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 98131.98,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.4,
+            "volume": 46.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.8,
+            "volume": 6.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.2,
+            "volume": 1.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.6,
+            "volume": 6.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.4,
+            "volume": 12.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.82
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": -0.2
+          },
+          {
+            "name": "Education",
+            "value": 10.51
+          }
+        ]
+      },
+      "C5": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 141581.02,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.4,
+            "volume": 50.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.3,
+            "volume": 5.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.6,
+            "volume": 6.7
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.2,
+            "volume": 2.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.1,
+            "volume": 10.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 28.65
+          },
+          {
+            "name": "Income",
+            "value": 0.3
+          },
+          {
+            "name": "Health",
+            "value": 0.84
+          },
+          {
+            "name": "Education",
+            "value": 31.66
+          }
+        ]
+      },
+      "C6": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 86830.05,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 91.0,
+            "volume": 54.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.4,
+            "volume": 4.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.4,
+            "volume": 6.4
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.1,
+            "volume": 11.6
+          },
+          {
+            "name": "Public Order",
+            "harm": 0.9,
+            "volume": 8.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 15.03
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": -0.01
+          },
+          {
+            "name": "Education",
+            "value": 14.95
+          }
+        ]
+      },
+      "C7": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 67781.9,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 89.8,
+            "volume": 55.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.4,
+            "volume": 7.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.3,
+            "volume": 6.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.0,
+            "volume": 10.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 0.7,
+            "volume": 0.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 7.97
+          },
+          {
+            "name": "Income",
+            "value": 0.1
+          },
+          {
+            "name": "Health",
+            "value": -0.33
+          },
+          {
+            "name": "Education",
+            "value": 7.18
+          }
+        ]
+      },
+      "C8": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 241417.16,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.4,
+            "volume": 53.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.7,
+            "volume": 5.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 9.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.9,
+            "volume": 1.1
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.0,
+            "volume": 2.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 49.01
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.11
+          },
+          {
+            "name": "Education",
+            "value": 57.69
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 80826.57,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.3,
+            "volume": 45.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.9,
+            "volume": 7.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.7,
+            "volume": 6.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.4,
+            "volume": 13.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.2,
+            "volume": 0.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 12.52
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": -0.27
+          },
+          {
+            "name": "Education",
+            "value": 12.02
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 202166.18,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.6,
+            "volume": 44.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.9,
+            "volume": 4.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.3,
+            "volume": 1.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 8.5
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.6,
+            "volume": 3.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 47.24
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 0.95
+          },
+          {
+            "name": "Education",
+            "value": 51.72
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 142271.1,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 78.4,
+            "volume": 27.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.6,
+            "volume": 5.5
+          },
+          {
+            "name": "Theft",
+            "harm": 3.2,
+            "volume": 29.5
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.6,
+            "volume": 1.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 6.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.44
+          },
+          {
+            "name": "Income",
+            "value": 0.19
+          },
+          {
+            "name": "Health",
+            "value": 0.18
+          },
+          {
+            "name": "Education",
+            "value": 16.92
+          }
+        ]
+      },
+      "C3": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 57828.61,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.5,
+            "volume": 31.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 12.7,
+            "volume": 12.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.4,
+            "volume": 7.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.9,
+            "volume": 13.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.6,
+            "volume": 0.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 8.09
+          },
+          {
+            "name": "Income",
+            "value": 0.08
+          },
+          {
+            "name": "Health",
+            "value": -0.58
+          },
+          {
+            "name": "Education",
+            "value": 5.41
+          }
+        ]
+      },
+      "C4": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 1050556.71,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.8,
+            "volume": 26.7
+          },
+          {
+            "name": "Theft",
+            "harm": 4.1,
+            "volume": 37.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.9,
+            "volume": 3.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.9,
+            "volume": 5.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.9,
+            "volume": 2.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.13
+          },
+          {
+            "name": "Income",
+            "value": 0.11
+          },
+          {
+            "name": "Health",
+            "value": 0.72
+          },
+          {
+            "name": "Education",
+            "value": 19.63
+          }
+        ]
+      }
+    }
+  },
+  "Leicester": {
+    "dbscan": {
+      "C0": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 169751.12,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.7,
+            "volume": 40.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.3,
+            "volume": 12.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.0,
+            "volume": 3.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.6,
+            "volume": 1.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 14.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 54.7
+          },
+          {
+            "name": "Income",
+            "value": 0.56
+          },
+          {
+            "name": "Health",
+            "value": 1.25
+          },
+          {
+            "name": "Education",
+            "value": 54.65
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 92823.41,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.2,
+            "volume": 44.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.7,
+            "volume": 4.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.4,
+            "volume": 9.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.5,
+            "volume": 13.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 36.38
+          },
+          {
+            "name": "Income",
+            "value": 0.39
+          },
+          {
+            "name": "Health",
+            "value": 0.16
+          },
+          {
+            "name": "Education",
+            "value": 49.82
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 103697.85,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.5,
+            "volume": 47.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 10.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.2,
+            "volume": 2.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.9,
+            "volume": 1.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.4,
+            "volume": 2.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 47.17
+          },
+          {
+            "name": "Income",
+            "value": 0.52
+          },
+          {
+            "name": "Health",
+            "value": 0.78
+          },
+          {
+            "name": "Education",
+            "value": 50.24
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 65655.05,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.6,
+            "volume": 40.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.9,
+            "volume": 5.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.7,
+            "volume": 9.6
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.8,
+            "volume": 3.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 13.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.34
+          },
+          {
+            "name": "Income",
+            "value": 0.22
+          },
+          {
+            "name": "Health",
+            "value": -0.21
+          },
+          {
+            "name": "Education",
+            "value": 21.67
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 123987.04,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.0,
+            "volume": 42.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 3.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 10.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.7,
+            "volume": 3.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.46
+          },
+          {
+            "name": "Income",
+            "value": 0.46
+          },
+          {
+            "name": "Health",
+            "value": 0.73
+          },
+          {
+            "name": "Education",
+            "value": 51.67
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 175378.05,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 78.7,
+            "volume": 29.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.0,
+            "volume": 3.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.1,
+            "volume": 4.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.6,
+            "volume": 7.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 28.09
+          },
+          {
+            "name": "Income",
+            "value": 0.25
+          },
+          {
+            "name": "Health",
+            "value": 0.24
+          },
+          {
+            "name": "Education",
+            "value": 29.07
+          }
+        ]
+      }
+    }
+  },
+  "Liverpool": {
+    "dbscan": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 111495.68,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.4,
+            "volume": 43.1
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 4.5,
+            "volume": 8.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.6,
+            "volume": 9.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.3,
+            "volume": 2.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.3,
+            "volume": 10.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 44.39
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 1.59
+          },
+          {
+            "name": "Education",
+            "value": 41.67
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 222279.16,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.6,
+            "volume": 44.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 5.1,
+            "volume": 10.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.1,
+            "volume": 5.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 8.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 70.85
+          },
+          {
+            "name": "Income",
+            "value": 0.61
+          },
+          {
+            "name": "Health",
+            "value": 2.43
+          },
+          {
+            "name": "Education",
+            "value": 57.68
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 111521.73,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.5,
+            "volume": 46.8
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 4.7,
+            "volume": 10.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.5,
+            "volume": 3.2
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.4,
+            "volume": 1.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 8.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 52.44
+          },
+          {
+            "name": "Income",
+            "value": 0.46
+          },
+          {
+            "name": "Health",
+            "value": 1.63
+          },
+          {
+            "name": "Education",
+            "value": 49.63
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 302319.89,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 75.5,
+            "volume": 28.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 9.7,
+            "volume": 14.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 2.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.6,
+            "volume": 0.9
+          },
+          {
+            "name": "Theft",
+            "harm": 2.5,
+            "volume": 24.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 28.65
+          },
+          {
+            "name": "Income",
+            "value": 0.23
+          },
+          {
+            "name": "Health",
+            "value": 1.22
+          },
+          {
+            "name": "Education",
+            "value": 24.92
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 65314.59,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.4,
+            "volume": 39.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.6,
+            "volume": 3.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 8.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.3,
+            "volume": 4.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.8,
+            "volume": 14.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.01
+          },
+          {
+            "name": "Income",
+            "value": 0.16
+          },
+          {
+            "name": "Health",
+            "value": 0.49
+          },
+          {
+            "name": "Education",
+            "value": 12.04
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 144690.98,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.7,
+            "volume": 40.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 4.5,
+            "volume": 8.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.7,
+            "volume": 3.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 9.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 52.42
+          },
+          {
+            "name": "Income",
+            "value": 0.49
+          },
+          {
+            "name": "Health",
+            "value": 1.79
+          },
+          {
+            "name": "Education",
+            "value": 48.64
+          }
+        ]
+      }
+    }
+  },
+  "London": {
+    "dbscan": {
+      "C0": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 76136.24,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 78.2,
+            "volume": 28.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.8,
+            "volume": 5.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.8,
+            "volume": 23.8
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.2,
+            "volume": 2.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.8,
+            "volume": 4.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 24.17
+          },
+          {
+            "name": "Income",
+            "value": 0.3
+          },
+          {
+            "name": "Health",
+            "value": -0.11
+          },
+          {
+            "name": "Education",
+            "value": 17.01
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 34325.24,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 69.0,
+            "volume": 20.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 14.7,
+            "volume": 10.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.5,
+            "volume": 17.9
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.3,
+            "volume": 1.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.9,
+            "volume": 3.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 13.88
+          },
+          {
+            "name": "Income",
+            "value": 0.17
+          },
+          {
+            "name": "Health",
+            "value": -0.66
+          },
+          {
+            "name": "Education",
+            "value": 7.71
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 33214.39,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 71.7,
+            "volume": 22.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 11.1,
+            "volume": 8.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 4.0,
+            "volume": 9.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.6,
+            "volume": 4.4
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.0,
+            "volume": 16.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 6.18
+          },
+          {
+            "name": "Income",
+            "value": 0.09
+          },
+          {
+            "name": "Health",
+            "value": -1.11
+          },
+          {
+            "name": "Education",
+            "value": 3.39
+          }
+        ]
+      },
+      "C3": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 34420.78,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 75.5,
+            "volume": 29.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 12.5,
+            "volume": 11.4
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.6,
+            "volume": 17.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.3,
+            "volume": 0.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 5.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 5.29
+          },
+          {
+            "name": "Income",
+            "value": 0.09
+          },
+          {
+            "name": "Health",
+            "value": -1.29
+          },
+          {
+            "name": "Education",
+            "value": 3.52
+          }
+        ]
+      },
+      "C4": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 62834.82,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 68.3,
+            "volume": 18.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 9.4,
+            "volume": 5.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 6.9,
+            "volume": 31.9
+          },
+          {
+            "name": "Robbery",
+            "harm": 5.7,
+            "volume": 3.1
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.9,
+            "volume": 3.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 15.89
+          },
+          {
+            "name": "Income",
+            "value": 0.17
+          },
+          {
+            "name": "Health",
+            "value": -0.31
+          },
+          {
+            "name": "Education",
+            "value": 3.5
+          }
+        ]
+      },
+      "C5": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 33663.02,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 70.5,
+            "volume": 23.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 18.6,
+            "volume": 14.6
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.5,
+            "volume": 1.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.4,
+            "volume": 13.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.5,
+            "volume": 3.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 10.27
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": -0.96
+          },
+          {
+            "name": "Education",
+            "value": 5.5
+          }
+        ]
+      },
+      "C6": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 102915.44,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 68.1,
+            "volume": 16.0
+          },
+          {
+            "name": "Theft",
+            "harm": 7.7,
+            "volume": 47.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.8,
+            "volume": 3.7
+          },
+          {
+            "name": "Robbery",
+            "harm": 6.8,
+            "volume": 3.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.0,
+            "volume": 12.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 13.27
+          },
+          {
+            "name": "Income",
+            "value": 0.17
+          },
+          {
+            "name": "Health",
+            "value": -0.82
+          },
+          {
+            "name": "Education",
+            "value": 5.87
+          }
+        ]
+      },
+      "C7": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 107824.63,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 70.8,
+            "volume": 18.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 7.6,
+            "volume": 4.6
+          },
+          {
+            "name": "Robbery",
+            "harm": 5.5,
+            "volume": 2.9
+          },
+          {
+            "name": "Theft",
+            "harm": 5.5,
+            "volume": 37.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.3,
+            "volume": 19.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.39
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": -1.12
+          },
+          {
+            "name": "Education",
+            "value": 6.99
+          }
+        ]
+      },
+      "C8": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 56183.32,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 69.0,
+            "volume": 19.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 10.8,
+            "volume": 7.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 6.0,
+            "volume": 29.7
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 4.4,
+            "volume": 5.0
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.7,
+            "volume": 2.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.82
+          },
+          {
+            "name": "Income",
+            "value": 0.21
+          },
+          {
+            "name": "Health",
+            "value": -0.15
+          },
+          {
+            "name": "Education",
+            "value": 4.91
+          }
+        ]
+      },
+      "C9": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 351089.3,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 69.2,
+            "volume": 18.1
+          },
+          {
+            "name": "Robbery",
+            "harm": 7.0,
+            "volume": 3.7
+          },
+          {
+            "name": "Theft",
+            "harm": 5.6,
+            "volume": 38.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.0,
+            "volume": 3.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.6,
+            "volume": 20.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 29.35
+          },
+          {
+            "name": "Income",
+            "value": 0.27
+          },
+          {
+            "name": "Health",
+            "value": 0.35
+          },
+          {
+            "name": "Education",
+            "value": 11.1
+          }
+        ]
+      },
+      "C10": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 42632.61,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.5,
+            "volume": 27.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 10.8,
+            "volume": 8.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.9,
+            "volume": 23.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 6.2
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.7,
+            "volume": 1.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 4.01
+          },
+          {
+            "name": "Income",
+            "value": 0.08
+          },
+          {
+            "name": "Health",
+            "value": -1.62
+          },
+          {
+            "name": "Education",
+            "value": 1.45
+          }
+        ]
+      },
+      "C11": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 75280.49,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 70.4,
+            "volume": 20.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 10.2,
+            "volume": 6.9
+          },
+          {
+            "name": "Robbery",
+            "harm": 7.2,
+            "volume": 4.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.7,
+            "volume": 23.4
+          },
+          {
+            "name": "Theft",
+            "harm": 2.9,
+            "volume": 22.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 13.38
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": -0.24
+          },
+          {
+            "name": "Education",
+            "value": 2.07
+          }
+        ]
+      },
+      "C12": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 96607.64,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 66.6,
+            "volume": 17.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 12.4,
+            "volume": 7.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 6.0,
+            "volume": 26.8
+          },
+          {
+            "name": "Theft",
+            "harm": 4.3,
+            "volume": 29.5
+          },
+          {
+            "name": "Robbery",
+            "harm": 4.1,
+            "volume": 2.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 18.55
+          },
+          {
+            "name": "Income",
+            "value": 0.22
+          },
+          {
+            "name": "Health",
+            "value": 0.03
+          },
+          {
+            "name": "Education",
+            "value": 4.64
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 92196.68,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 78.5,
+            "volume": 29.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.0,
+            "volume": 4.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.8,
+            "volume": 24.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.3,
+            "volume": 2.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.2,
+            "volume": 4.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 31.31
+          },
+          {
+            "name": "Income",
+            "value": 0.39
+          },
+          {
+            "name": "Health",
+            "value": 0.21
+          },
+          {
+            "name": "Education",
+            "value": 23.41
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 46987.13,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 74.7,
+            "volume": 24.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 9.1,
+            "volume": 6.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.1,
+            "volume": 22.9
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.8,
+            "volume": 1.8
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.6,
+            "volume": 3.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.23
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": -0.88
+          },
+          {
+            "name": "Education",
+            "value": 6.32
+          }
+        ]
+      },
+      "C2": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 156771.46,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 66.8,
+            "volume": 16.3
+          },
+          {
+            "name": "Robbery",
+            "harm": 7.7,
+            "volume": 3.7
+          },
+          {
+            "name": "Theft",
+            "harm": 6.6,
+            "volume": 42.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.3,
+            "volume": 3.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.1,
+            "volume": 17.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.58
+          },
+          {
+            "name": "Income",
+            "value": 0.24
+          },
+          {
+            "name": "Health",
+            "value": -0.19
+          },
+          {
+            "name": "Education",
+            "value": 10.48
+          }
+        ]
+      }
+    }
+  },
+  "Manchester": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Stable Violence/Sexual",
+        "harmPer1000": 735.83,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 96.9,
+            "volume": 68.6
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.1,
+            "volume": 2.9
+          },
+          {
+            "name": "Theft",
+            "harm": 0.9,
+            "volume": 16.0
+          },
+          {
+            "name": "Public Order",
+            "harm": 0.4,
+            "volume": 5.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.2,
+            "volume": 0.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 39.2
+          },
+          {
+            "name": "Income",
+            "value": 0.37
+          },
+          {
+            "name": "Health",
+            "value": 1.11
+          },
+          {
+            "name": "Education",
+            "value": 27.59
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Deprived Miscellaneous",
+        "harmPer1000": 23.32,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Miscellaneous",
+            "harm": 100.0,
+            "volume": 100.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.42
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.52
+          },
+          {
+            "name": "Education",
+            "value": 36.57
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 1211.89,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 95.3,
+            "volume": 60.8
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.4,
+            "volume": 3.5
+          },
+          {
+            "name": "Theft",
+            "harm": 1.2,
+            "volume": 20.0
+          },
+          {
+            "name": "Public Order",
+            "harm": 0.9,
+            "volume": 9.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.4,
+            "volume": 2.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 23.25
+          },
+          {
+            "name": "Income",
+            "value": 0.2
+          },
+          {
+            "name": "Health",
+            "value": 0.72
+          },
+          {
+            "name": "Education",
+            "value": 12.83
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 585.3,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 94.9,
+            "volume": 68.3
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.0,
+            "volume": 8.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.3,
+            "volume": 6.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 0.3,
+            "volume": 4.1
+          },
+          {
+            "name": "Public Order",
+            "harm": 0.3,
+            "volume": 3.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 53.8
+          },
+          {
+            "name": "Income",
+            "value": 0.53
+          },
+          {
+            "name": "Health",
+            "value": 1.44
+          },
+          {
+            "name": "Education",
+            "value": 40.86
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Theft",
+        "harmPer1000": 20.56,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Theft",
+            "harm": 100.0,
+            "volume": 100.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 41.66
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 1.16
+          },
+          {
+            "name": "Education",
+            "value": 27.05
+          }
+        ]
+      },
+      "C3": {
+        "name": "Moderate Harm Deprived Miscellaneous",
+        "harmPer1000": 23.32,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Miscellaneous",
+            "harm": 100.0,
+            "volume": 100.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.42
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.52
+          },
+          {
+            "name": "Education",
+            "value": 36.57
+          }
+        ]
+      },
+      "C4": {
+        "name": "Moderate Harm Stable Vehicle Offences",
+        "harmPer1000": 3.43,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Vehicle Offences",
+            "harm": 100.0,
+            "volume": 100.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 9.23
+          },
+          {
+            "name": "Income",
+            "value": 0.04
+          },
+          {
+            "name": "Health",
+            "value": 0.61
+          },
+          {
+            "name": "Education",
+            "value": 0.28
+          }
+        ]
+      },
+      "C5": {
+        "name": "Moderate Harm Stable Public Order",
+        "harmPer1000": 24.76,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Public Order",
+            "harm": 100.0,
+            "volume": 100.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.35
+          },
+          {
+            "name": "Income",
+            "value": 0.16
+          },
+          {
+            "name": "Health",
+            "value": 0.18
+          },
+          {
+            "name": "Education",
+            "value": 6.07
+          }
+        ]
+      },
+      "C6": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 1106.24,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.3,
+            "volume": 66.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 17.7,
+            "volume": 33.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 29.77
+          },
+          {
+            "name": "Income",
+            "value": 0.26
+          },
+          {
+            "name": "Health",
+            "value": 1.14
+          },
+          {
+            "name": "Education",
+            "value": 20.66
+          }
+        ]
+      },
+      "C7": {
+        "name": "Moderate Harm Mixed Robbery",
+        "harmPer1000": 276.85,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Robbery",
+            "harm": 72.9,
+            "volume": 33.3
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 18.7,
+            "volume": 16.7
+          },
+          {
+            "name": "Theft",
+            "harm": 8.4,
+            "volume": 50.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 0.0,
+            "volume": 0.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 0.0,
+            "volume": 0.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 33.76
+          },
+          {
+            "name": "Income",
+            "value": 0.33
+          },
+          {
+            "name": "Health",
+            "value": 1.24
+          },
+          {
+            "name": "Education",
+            "value": 17.91
+          }
+        ]
+      },
+      "C8": {
+        "name": "Very High Harm Stable Violence/Sexual",
+        "harmPer1000": 29710.38,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 47.4,
+            "volume": 14.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 21.1,
+            "volume": 6.0
+          },
+          {
+            "name": "Robbery",
+            "harm": 9.7,
+            "volume": 5.7
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 7.5,
+            "volume": 8.6
+          },
+          {
+            "name": "Theft",
+            "harm": 4.6,
+            "volume": 35.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.93
+          },
+          {
+            "name": "Income",
+            "value": 0.02
+          },
+          {
+            "name": "Health",
+            "value": 0.59
+          },
+          {
+            "name": "Education",
+            "value": 13.65
+          }
+        ]
+      },
+      "C9": {
+        "name": "Moderate Harm Deprived Weapons",
+        "harmPer1000": 1350.24,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Weapons",
+            "harm": 35.6,
+            "volume": 14.3
+          },
+          {
+            "name": "Violence/Sexual",
+            "harm": 34.5,
+            "volume": 14.3
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 26.5,
+            "volume": 42.9
+          },
+          {
+            "name": "Public Order",
+            "harm": 2.1,
+            "volume": 14.3
+          },
+          {
+            "name": "Theft",
+            "harm": 1.3,
+            "volume": 14.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 41.18
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 1.45
+          },
+          {
+            "name": "Education",
+            "value": 28.14
+          }
+        ]
+      }
+    }
+  },
+  "Newcastle upon Tyne": {
+    "dbscan": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 124786.91,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.6,
+            "volume": 36.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.6,
+            "volume": 26.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.2,
+            "volume": 10.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 2.9
+          },
+          {
+            "name": "Public Order",
+            "harm": 1.3,
+            "volume": 9.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.01
+          },
+          {
+            "name": "Income",
+            "value": 0.45
+          },
+          {
+            "name": "Health",
+            "value": 1.35
+          },
+          {
+            "name": "Education",
+            "value": 48.08
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 149218.06,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.8,
+            "volume": 35.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 3.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.4,
+            "volume": 11.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.9,
+            "volume": 21.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.5,
+            "volume": 1.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 63.52
+          },
+          {
+            "name": "Income",
+            "value": 0.61
+          },
+          {
+            "name": "Health",
+            "value": 1.81
+          },
+          {
+            "name": "Education",
+            "value": 62.18
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 142167.91,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 83.4,
+            "volume": 37.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.9,
+            "volume": 4.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.6,
+            "volume": 12.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.8,
+            "volume": 22.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.8,
+            "volume": 1.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 47.14
+          },
+          {
+            "name": "Income",
+            "value": 0.47
+          },
+          {
+            "name": "Health",
+            "value": 1.32
+          },
+          {
+            "name": "Education",
+            "value": 52.75
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 66896.82,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.2,
+            "volume": 33.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.9,
+            "volume": 4.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 22.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.6,
+            "volume": 8.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 14.46
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": 0.17
+          },
+          {
+            "name": "Education",
+            "value": 13.73
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 35115.4,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 71.2,
+            "volume": 20.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 10.1,
+            "volume": 6.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 6.1,
+            "volume": 29.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 4.1,
+            "volume": 8.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.7,
+            "volume": 0.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 7.0
+          },
+          {
+            "name": "Income",
+            "value": 0.07
+          },
+          {
+            "name": "Health",
+            "value": -0.53
+          },
+          {
+            "name": "Education",
+            "value": 3.89
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 100121.66,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 72.9,
+            "volume": 19.4
+          },
+          {
+            "name": "Theft",
+            "harm": 5.0,
+            "volume": 34.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.9,
+            "volume": 22.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.7,
+            "volume": 2.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.0,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 16.76
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": 0.42
+          },
+          {
+            "name": "Education",
+            "value": 12.82
+          }
+        ]
+      },
+      "C3": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 142689.87,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 81.7,
+            "volume": 33.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.6,
+            "volume": 3.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.2,
+            "volume": 9.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 22.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.5,
+            "volume": 1.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 51.21
+          },
+          {
+            "name": "Income",
+            "value": 0.5
+          },
+          {
+            "name": "Health",
+            "value": 1.44
+          },
+          {
+            "name": "Education",
+            "value": 56.54
+          }
+        ]
+      },
+      "C4": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 1414759.17,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.2,
+            "volume": 36.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 23.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.8,
+            "volume": 4.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.3,
+            "volume": 1.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 1.7,
+            "volume": 1.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.71
+          },
+          {
+            "name": "Income",
+            "value": 0.08
+          },
+          {
+            "name": "Health",
+            "value": 0.6
+          },
+          {
+            "name": "Education",
+            "value": 8.52
+          }
+        ]
+      }
+    }
+  },
+  "Nottingham": {
+    "dbscan": {
+      "C0": {
+        "name": "Low Harm Deprived Violence/Sexual",
+        "harmPer1000": 116696.6,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 81.5,
+            "volume": 35.2
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.1,
+            "volume": 1.7
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 23.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.0,
+            "volume": 3.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 9.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 41.69
+          },
+          {
+            "name": "Income",
+            "value": 0.43
+          },
+          {
+            "name": "Health",
+            "value": 1.09
+          },
+          {
+            "name": "Education",
+            "value": 40.43
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Stable Violence/Sexual",
+        "harmPer1000": 137160.37,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 79.3,
+            "volume": 29.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.5,
+            "volume": 3.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.4,
+            "volume": 1.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.5,
+            "volume": 16.0
+          },
+          {
+            "name": "Theft",
+            "harm": 2.5,
+            "volume": 24.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.92
+          },
+          {
+            "name": "Income",
+            "value": 0.19
+          },
+          {
+            "name": "Health",
+            "value": 0.47
+          },
+          {
+            "name": "Education",
+            "value": 22.27
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 78422.38,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.2,
+            "volume": 35.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.0,
+            "volume": 4.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.1,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.6,
+            "volume": 19.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 6.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.11
+          },
+          {
+            "name": "Income",
+            "value": 0.17
+          },
+          {
+            "name": "Health",
+            "value": 0.24
+          },
+          {
+            "name": "Education",
+            "value": 15.51
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 131951.47,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 80.9,
+            "volume": 34.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.3,
+            "volume": 1.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 23.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 2.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 9.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.96
+          },
+          {
+            "name": "Income",
+            "value": 0.47
+          },
+          {
+            "name": "Health",
+            "value": 1.24
+          },
+          {
+            "name": "Education",
+            "value": 44.07
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 160323.48,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 72.4,
+            "volume": 21.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.7,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 4.3,
+            "volume": 21.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.0,
+            "volume": 2.8
+          },
+          {
+            "name": "Theft",
+            "harm": 4.0,
+            "volume": 30.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 23.57
+          },
+          {
+            "name": "Income",
+            "value": 0.19
+          },
+          {
+            "name": "Health",
+            "value": 0.55
+          },
+          {
+            "name": "Education",
+            "value": 22.07
+          }
+        ]
+      }
+    }
+  },
+  "Plymouth": {
+    "dbscan": {
+      "C0": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 88590.7,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.2,
+            "volume": 50.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.1,
+            "volume": 2.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 8.6
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.9,
+            "volume": 4.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.6,
+            "volume": 16.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 33.74
+          },
+          {
+            "name": "Income",
+            "value": 0.37
+          },
+          {
+            "name": "Health",
+            "value": 0.81
+          },
+          {
+            "name": "Education",
+            "value": 48.01
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 119073.76,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.0,
+            "volume": 47.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.7,
+            "volume": 1.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 10.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.3,
+            "volume": 21.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 1.7,
+            "volume": 2.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 41.1
+          },
+          {
+            "name": "Income",
+            "value": 0.43
+          },
+          {
+            "name": "Health",
+            "value": 1.12
+          },
+          {
+            "name": "Education",
+            "value": 52.69
+          }
+        ]
+      },
+      "C2": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 69870.75,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 90.9,
+            "volume": 52.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 9.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.0,
+            "volume": 19.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.8,
+            "volume": 1.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 1.2,
+            "volume": 1.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 20.03
+          },
+          {
+            "name": "Income",
+            "value": 0.22
+          },
+          {
+            "name": "Health",
+            "value": 0.3
+          },
+          {
+            "name": "Education",
+            "value": 25.91
+          }
+        ]
+      },
+      "C3": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 104734.94,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.7,
+            "volume": 40.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.5,
+            "volume": 1.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 10.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.5,
+            "volume": 4.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.2,
+            "volume": 17.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 27.55
+          },
+          {
+            "name": "Income",
+            "value": 0.26
+          },
+          {
+            "name": "Health",
+            "value": 0.66
+          },
+          {
+            "name": "Education",
+            "value": 23.3
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 47305.82,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 84.0,
+            "volume": 35.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.7,
+            "volume": 11.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.1,
+            "volume": 3.0
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.8,
+            "volume": 20.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.2,
+            "volume": 0.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.04
+          },
+          {
+            "name": "Income",
+            "value": 0.12
+          },
+          {
+            "name": "Health",
+            "value": -0.13
+          },
+          {
+            "name": "Education",
+            "value": 10.49
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 57397.36,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 89.5,
+            "volume": 49.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 8.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.1,
+            "volume": 1.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.0,
+            "volume": 18.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 1.6,
+            "volume": 2.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 13.29
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": -0.05
+          },
+          {
+            "name": "Education",
+            "value": 16.3
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 138606.11,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.4,
+            "volume": 46.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 9.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.1,
+            "volume": 19.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.8,
+            "volume": 3.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 42.41
+          },
+          {
+            "name": "Income",
+            "value": 0.43
+          },
+          {
+            "name": "Health",
+            "value": 1.12
+          },
+          {
+            "name": "Education",
+            "value": 50.51
+          }
+        ]
+      },
+      "C3": {
+        "name": "Very High Harm Mixed Violence/Sexual",
+        "harmPer1000": 176117.19,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.5,
+            "volume": 34.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.9,
+            "volume": 1.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.0,
+            "volume": 21.5
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.8,
+            "volume": 4.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 7.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 28.78
+          },
+          {
+            "name": "Income",
+            "value": 0.26
+          },
+          {
+            "name": "Health",
+            "value": 0.81
+          },
+          {
+            "name": "Education",
+            "value": 26.96
+          }
+        ]
+      }
+    }
+  },
+  "Portsmouth": {
+    "dbscan": {
+      "C0": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 63975.06,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 90.4,
+            "volume": 51.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.3,
+            "volume": 3.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.8,
+            "volume": 7.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.7,
+            "volume": 0.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.1,
+            "volume": 2.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 9.93
+          },
+          {
+            "name": "Income",
+            "value": 0.12
+          },
+          {
+            "name": "Health",
+            "value": -0.36
+          },
+          {
+            "name": "Education",
+            "value": 13.49
+          }
+        ]
+      },
+      "C1": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 108530.7,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.3,
+            "volume": 43.3
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.1,
+            "volume": 3.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.7,
+            "volume": 1.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 7.1
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.7,
+            "volume": 3.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.46
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": 0.05
+          },
+          {
+            "name": "Education",
+            "value": 19.91
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 93141.48,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.7,
+            "volume": 52.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.2,
+            "volume": 4.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.2,
+            "volume": 1.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.7,
+            "volume": 7.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.6,
+            "volume": 3.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 27.69
+          },
+          {
+            "name": "Income",
+            "value": 0.3
+          },
+          {
+            "name": "Health",
+            "value": 0.3
+          },
+          {
+            "name": "Education",
+            "value": 34.0
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 125601.44,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.9,
+            "volume": 34.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.5,
+            "volume": 1.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.4,
+            "volume": 2.3
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 2.3,
+            "volume": 3.6
+          },
+          {
+            "name": "Theft",
+            "harm": 2.2,
+            "volume": 24.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.07
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": -0.04
+          },
+          {
+            "name": "Education",
+            "value": 18.05
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 227350.0,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.8,
+            "volume": 43.2
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.8,
+            "volume": 1.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.0,
+            "volume": 2.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.8,
+            "volume": 6.7
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.8,
+            "volume": 3.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.25
+          },
+          {
+            "name": "Income",
+            "value": 0.47
+          },
+          {
+            "name": "Health",
+            "value": 1.16
+          },
+          {
+            "name": "Education",
+            "value": 55.98
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 68701.81,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.0,
+            "volume": 47.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.0,
+            "volume": 3.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.2,
+            "volume": 1.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 8.0
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.4,
+            "volume": 3.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 16.71
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": -0.09
+          },
+          {
+            "name": "Education",
+            "value": 19.58
+          }
+        ]
+      }
+    }
+  },
+  "Reading": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Stable Violence/Sexual",
+        "harmPer1000": 120654.47,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.5,
+            "volume": 43.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.8,
+            "volume": 3.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.8,
+            "volume": 6.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.7,
+            "volume": 0.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.5,
+            "volume": 12.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.38
+          },
+          {
+            "name": "Income",
+            "value": 0.25
+          },
+          {
+            "name": "Health",
+            "value": 0.0
+          },
+          {
+            "name": "Education",
+            "value": 24.86
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Deprived Violence/Sexual",
+        "harmPer1000": 109666.86,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 89.5,
+            "volume": 50.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.1,
+            "volume": 2.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.0,
+            "volume": 1.1
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.7,
+            "volume": 7.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.5,
+            "volume": 14.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 38.08
+          },
+          {
+            "name": "Income",
+            "value": 0.44
+          },
+          {
+            "name": "Health",
+            "value": 0.63
+          },
+          {
+            "name": "Education",
+            "value": 52.47
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 143840.2,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.1,
+            "volume": 36.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.2,
+            "volume": 3.2
+          },
+          {
+            "name": "Theft",
+            "harm": 2.2,
+            "volume": 24.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 6.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.8,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 27.95
+          },
+          {
+            "name": "Income",
+            "value": 0.31
+          },
+          {
+            "name": "Health",
+            "value": 0.34
+          },
+          {
+            "name": "Education",
+            "value": 37.59
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 58618.33,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.6,
+            "volume": 38.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.8,
+            "volume": 4.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 7.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.9,
+            "volume": 0.8
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.7,
+            "volume": 13.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 10.5
+          },
+          {
+            "name": "Income",
+            "value": 0.12
+          },
+          {
+            "name": "Health",
+            "value": -0.52
+          },
+          {
+            "name": "Education",
+            "value": 11.45
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Stable Violence/Sexual",
+        "harmPer1000": 78752.24,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.4,
+            "volume": 23.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.1,
+            "volume": 4.4
+          },
+          {
+            "name": "Theft",
+            "harm": 4.9,
+            "volume": 39.7
+          },
+          {
+            "name": "Robbery",
+            "harm": 3.3,
+            "volume": 2.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.3,
+            "volume": 5.4
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 11.75
+          },
+          {
+            "name": "Income",
+            "value": 0.13
+          },
+          {
+            "name": "Health",
+            "value": -0.48
+          },
+          {
+            "name": "Education",
+            "value": 10.71
+          }
+        ]
+      }
+    }
+  },
+  "Sheffield": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 103106.78,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 82.0,
+            "volume": 37.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.5,
+            "volume": 5.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 9.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.8,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.4,
+            "volume": 18.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 32.14
+          },
+          {
+            "name": "Income",
+            "value": 0.33
+          },
+          {
+            "name": "Health",
+            "value": 0.72
+          },
+          {
+            "name": "Education",
+            "value": 35.26
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 86581.21,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 71.4,
+            "volume": 19.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 8.1,
+            "volume": 5.3
+          },
+          {
+            "name": "Theft",
+            "harm": 4.5,
+            "volume": 32.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.4,
+            "volume": 0.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.3,
+            "volume": 15.7
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 15.04
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": 0.03
+          },
+          {
+            "name": "Education",
+            "value": 8.28
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 148502.32,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 81.8,
+            "volume": 36.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.3,
+            "volume": 4.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.2,
+            "volume": 1.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.8,
+            "volume": 9.4
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.3,
+            "volume": 17.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 46.96
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.27
+          },
+          {
+            "name": "Education",
+            "value": 53.62
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 115098.73,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 72.7,
+            "volume": 22.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.3,
+            "volume": 4.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.0,
+            "volume": 1.2
+          },
+          {
+            "name": "Theft",
+            "harm": 3.6,
+            "volume": 28.5
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.3,
+            "volume": 3.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 17.49
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": 0.32
+          },
+          {
+            "name": "Education",
+            "value": 13.82
+          }
+        ]
+      },
+      "C2": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 45821.29,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 76.2,
+            "volume": 30.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 11.1,
+            "volume": 10.2
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 3.2,
+            "volume": 22.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.7,
+            "volume": 7.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.3,
+            "volume": 0.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 10.79
+          },
+          {
+            "name": "Income",
+            "value": 0.11
+          },
+          {
+            "name": "Health",
+            "value": -0.21
+          },
+          {
+            "name": "Education",
+            "value": 8.25
+          }
+        ]
+      }
+    }
+  },
+  "Southampton": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 128001.55,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.5,
+            "volume": 43.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 4.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.3,
+            "volume": 1.6
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.0,
+            "volume": 7.6
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.5,
+            "volume": 2.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 26.73
+          },
+          {
+            "name": "Income",
+            "value": 0.27
+          },
+          {
+            "name": "Health",
+            "value": 0.6
+          },
+          {
+            "name": "Education",
+            "value": 29.8
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 55610.71,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 79.2,
+            "volume": 31.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 8.9,
+            "volume": 8.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.6,
+            "volume": 1.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.4,
+            "volume": 7.2
+          },
+          {
+            "name": "Theft",
+            "harm": 2.2,
+            "volume": 23.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 9.79
+          },
+          {
+            "name": "Income",
+            "value": 0.13
+          },
+          {
+            "name": "Health",
+            "value": -0.3
+          },
+          {
+            "name": "Education",
+            "value": 9.69
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 174286.26,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.1,
+            "volume": 47.0
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.1,
+            "volume": 1.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.6,
+            "volume": 3.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 7.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.5,
+            "volume": 3.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 42.73
+          },
+          {
+            "name": "Income",
+            "value": 0.42
+          },
+          {
+            "name": "Health",
+            "value": 1.17
+          },
+          {
+            "name": "Education",
+            "value": 49.09
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 83482.61,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.0,
+            "volume": 42.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.8,
+            "volume": 5.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.9,
+            "volume": 1.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 8.2
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.3,
+            "volume": 2.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 16.49
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": 0.18
+          },
+          {
+            "name": "Education",
+            "value": 17.22
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 197705.97,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 80.6,
+            "volume": 33.1
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.0,
+            "volume": 1.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.5,
+            "volume": 3.3
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 3.0,
+            "volume": 4.8
+          },
+          {
+            "name": "Theft",
+            "harm": 2.4,
+            "volume": 26.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 21.13
+          },
+          {
+            "name": "Income",
+            "value": 0.21
+          },
+          {
+            "name": "Health",
+            "value": 0.48
+          },
+          {
+            "name": "Education",
+            "value": 21.06
+          }
+        ]
+      }
+    }
+  },
+  "Stoke-on-Trent": {
+    "dbscan": {
+      "C0": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 146241.41,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.3,
+            "volume": 45.4
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.2,
+            "volume": 3.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.7,
+            "volume": 10.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.6,
+            "volume": 1.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.9,
+            "volume": 16.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 50.92
+          },
+          {
+            "name": "Income",
+            "value": 0.49
+          },
+          {
+            "name": "Health",
+            "value": 1.46
+          },
+          {
+            "name": "Education",
+            "value": 58.2
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 65755.65,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.4,
+            "volume": 45.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.7,
+            "volume": 4.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 8.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.0,
+            "volume": 17.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.6,
+            "volume": 0.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 13.96
+          },
+          {
+            "name": "Income",
+            "value": 0.14
+          },
+          {
+            "name": "Health",
+            "value": 0.27
+          },
+          {
+            "name": "Education",
+            "value": 17.14
+          }
+        ]
+      },
+      "C2": {
+        "name": "High Harm Deprived Violence/Sexual",
+        "harmPer1000": 144342.94,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 88.7,
+            "volume": 49.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.5,
+            "volume": 3.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 8.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.0,
+            "volume": 1.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.9,
+            "volume": 17.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 48.74
+          },
+          {
+            "name": "Income",
+            "value": 0.5
+          },
+          {
+            "name": "Health",
+            "value": 1.45
+          },
+          {
+            "name": "Education",
+            "value": 51.32
+          }
+        ]
+      },
+      "C3": {
+        "name": "Moderate Harm Mixed Violence/Sexual",
+        "harmPer1000": 120503.81,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.0,
+            "volume": 41.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.7,
+            "volume": 5.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 9.3
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.1,
+            "volume": 17.4
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.1,
+            "volume": 2.1
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 32.45
+          },
+          {
+            "name": "Income",
+            "value": 0.35
+          },
+          {
+            "name": "Health",
+            "value": 0.86
+          },
+          {
+            "name": "Education",
+            "value": 34.89
+          }
+        ]
+      },
+      "C4": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 145728.95,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.3,
+            "volume": 43.5
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 3.2,
+            "volume": 12.0
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.1,
+            "volume": 3.6
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.5,
+            "volume": 21.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.3,
+            "volume": 0.6
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 39.26
+          },
+          {
+            "name": "Income",
+            "value": 0.39
+          },
+          {
+            "name": "Health",
+            "value": 1.16
+          },
+          {
+            "name": "Education",
+            "value": 52.81
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "High Harm Mixed Violence/Sexual",
+        "harmPer1000": 228369.23,
+        "forecast": "",
+        "alertLevel": "medium",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 77.5,
+            "volume": 29.7
+          },
+          {
+            "name": "Burglary",
+            "harm": 5.5,
+            "volume": 4.9
+          },
+          {
+            "name": "Weapons",
+            "harm": 4.1,
+            "volume": 1.5
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.8,
+            "volume": 18.7
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.7,
+            "volume": 7.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 42.84
+          },
+          {
+            "name": "Income",
+            "value": 0.4
+          },
+          {
+            "name": "Health",
+            "value": 1.22
+          },
+          {
+            "name": "Education",
+            "value": 44.33
+          }
+        ]
+      },
+      "C1": {
+        "name": "Very Low Harm Stable Violence/Sexual",
+        "harmPer1000": 66831.18,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.2,
+            "volume": 40.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.8,
+            "volume": 5.4
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 8.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 2.2,
+            "volume": 18.5
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.0,
+            "volume": 0.9
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 14.77
+          },
+          {
+            "name": "Income",
+            "value": 0.15
+          },
+          {
+            "name": "Health",
+            "value": 0.34
+          },
+          {
+            "name": "Education",
+            "value": 17.46
+          }
+        ]
+      },
+      "C2": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 149879.58,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.9,
+            "volume": 45.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.1,
+            "volume": 3.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.4,
+            "volume": 9.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.2,
+            "volume": 1.1
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.9,
+            "volume": 17.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.79
+          },
+          {
+            "name": "Income",
+            "value": 0.46
+          },
+          {
+            "name": "Health",
+            "value": 1.37
+          },
+          {
+            "name": "Education",
+            "value": 50.53
+          }
+        ]
+      }
+    }
+  },
+  "Wolverhampton": {
+    "dbscan": {
+      "C0": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 123941.35,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.3,
+            "volume": 49.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.4,
+            "volume": 1.9
+          },
+          {
+            "name": "Burglary",
+            "harm": 2.9,
+            "volume": 3.8
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 9.1
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.1,
+            "volume": 1.3
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 40.67
+          },
+          {
+            "name": "Income",
+            "value": 0.45
+          },
+          {
+            "name": "Health",
+            "value": 0.91
+          },
+          {
+            "name": "Education",
+            "value": 39.38
+          }
+        ]
+      },
+      "C1": {
+        "name": "Low Harm Mixed Violence/Sexual",
+        "harmPer1000": 68074.46,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.7,
+            "volume": 47.6
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.9,
+            "volume": 4.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.5,
+            "volume": 10.4
+          },
+          {
+            "name": "Weapons",
+            "harm": 1.7,
+            "volume": 0.9
+          },
+          {
+            "name": "Drug Offences",
+            "harm": 1.2,
+            "volume": 2.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 19.42
+          },
+          {
+            "name": "Income",
+            "value": 0.2
+          },
+          {
+            "name": "Health",
+            "value": 0.22
+          },
+          {
+            "name": "Education",
+            "value": 19.34
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 71495.9,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 85.8,
+            "volume": 47.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.4,
+            "volume": 5.6
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.6,
+            "volume": 1.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.8,
+            "volume": 7.4
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.6,
+            "volume": 1.8
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 15.44
+          },
+          {
+            "name": "Income",
+            "value": 0.18
+          },
+          {
+            "name": "Health",
+            "value": 0.04
+          },
+          {
+            "name": "Education",
+            "value": 12.67
+          }
+        ]
+      }
+    },
+    "kmeans": {
+      "C0": {
+        "name": "Very High Harm Deprived Violence/Sexual",
+        "harmPer1000": 243302.25,
+        "forecast": "",
+        "alertLevel": "high",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 81.2,
+            "volume": 35.8
+          },
+          {
+            "name": "Weapons",
+            "harm": 5.1,
+            "volume": 2.2
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.3,
+            "volume": 3.4
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.3,
+            "volume": 2.0
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 7.0
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 45.07
+          },
+          {
+            "name": "Income",
+            "value": 0.48
+          },
+          {
+            "name": "Health",
+            "value": 1.05
+          },
+          {
+            "name": "Education",
+            "value": 38.82
+          }
+        ]
+      },
+      "C1": {
+        "name": "Moderate Harm Deprived Violence/Sexual",
+        "harmPer1000": 121277.19,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 87.4,
+            "volume": 49.3
+          },
+          {
+            "name": "Weapons",
+            "harm": 3.3,
+            "volume": 1.8
+          },
+          {
+            "name": "Burglary",
+            "harm": 3.0,
+            "volume": 3.9
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.1,
+            "volume": 8.9
+          },
+          {
+            "name": "Miscellaneous",
+            "harm": 1.0,
+            "volume": 9.5
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 40.54
+          },
+          {
+            "name": "Income",
+            "value": 0.45
+          },
+          {
+            "name": "Health",
+            "value": 0.92
+          },
+          {
+            "name": "Education",
+            "value": 39.21
+          }
+        ]
+      },
+      "C2": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 63801.94,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 86.4,
+            "volume": 45.5
+          },
+          {
+            "name": "Burglary",
+            "harm": 4.7,
+            "volume": 5.7
+          },
+          {
+            "name": "Weapons",
+            "harm": 2.5,
+            "volume": 1.3
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 1.9,
+            "volume": 7.5
+          },
+          {
+            "name": "Robbery",
+            "harm": 1.1,
+            "volume": 1.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 14.34
+          },
+          {
+            "name": "Income",
+            "value": 0.16
+          },
+          {
+            "name": "Health",
+            "value": 0.01
+          },
+          {
+            "name": "Education",
+            "value": 13.04
+          }
+        ]
+      },
+      "C3": {
+        "name": "Low Harm Stable Violence/Sexual",
+        "harmPer1000": 70437.18,
+        "forecast": "",
+        "alertLevel": "low",
+        "crimes": [
+          {
+            "name": "Violence/Sexual",
+            "harm": 75.3,
+            "volume": 18.7
+          },
+          {
+            "name": "Theft",
+            "harm": 8.6,
+            "volume": 56.1
+          },
+          {
+            "name": "Burglary",
+            "harm": 6.3,
+            "volume": 3.7
+          },
+          {
+            "name": "Robbery",
+            "harm": 2.5,
+            "volume": 1.2
+          },
+          {
+            "name": "Arson/Damage",
+            "harm": 2.2,
+            "volume": 4.2
+          }
+        ],
+        "imd": [
+          {
+            "name": "IMD Score",
+            "value": 14.86
+          },
+          {
+            "name": "Income",
+            "value": 0.17
+          },
+          {
+            "name": "Health",
+            "value": 0.02
+          },
+          {
+            "name": "Education",
+            "value": 13.26
+          }
+        ]
+      }
+    }
+  }
+}

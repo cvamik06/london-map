@@ -21,7 +21,6 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
       geojsonData.features = geojsonData.features.map(feature => {
         const lsoaCode = feature.properties.LSOA21CD; 
         
-        // FIX: Removed the default 0 so empty areas stay empty!
         const stats = clusterData[lsoaCode] || { kmeans_cluster: null, dbscan_cluster: null, City_Group: 'None' };
         
         return {
@@ -45,7 +44,6 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
   const kmeansLayer = {
     id: 'kmeans-layer', 
     type: 'fill',
-    // NEW: Only render polygons that belong to the selected city!
     filter: ['==', ['get', 'City_Group'], selectedCity],
     layout: { visibility: activeModel === 'kmeans' ? 'visible' : 'none' },
     paint: {
@@ -58,7 +56,6 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
   const dbscanLayer = {
     id: 'dbscan-layer', 
     type: 'fill',
-    // NEW: Only render polygons that belong to the selected city!
     filter: ['==', ['get', 'City_Group'], selectedCity],
     layout: { visibility: activeModel === 'dbscan' ? 'visible' : 'none' },
     paint: {
