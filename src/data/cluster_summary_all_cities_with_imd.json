@@ -1,4 +1,4 @@
-  {
+{
   "Birmingham": {
     "dbscan": {
       "C0": {
@@ -36,19 +36,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 53.16
+            "value": 0.29
           },
           {
             "name": "Income",
-            "value": 0.58
+            "value": 0.29
           },
           {
             "name": "Health",
-            "value": 1.13
+            "value": 0.49
           },
           {
             "name": "Education",
-            "value": 49.32
+            "value": 0.29
           }
         ]
       },
@@ -87,19 +87,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 22.66
+            "value": -1.11
           },
           {
             "name": "Income",
-            "value": 0.26
+            "value": -1.11
           },
           {
             "name": "Health",
-            "value": 0.43
+            "value": -1.15
           },
           {
             "name": "Education",
-            "value": 16.05
+            "value": -1.11
           }
         ]
       },
@@ -138,19 +138,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 64.57
+            "value": 0.82
           },
           {
             "name": "Income",
-            "value": 0.7
+            "value": 0.82
           },
           {
             "name": "Health",
-            "value": 1.2
+            "value": 0.66
           },
           {
             "name": "Education",
-            "value": 62.12
+            "value": 0.83
           }
         ]
       }
@@ -191,19 +191,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.45
+            "value": -0.85
           },
           {
             "name": "Income",
-            "value": 0.2
+            "value": -0.79
           },
           {
             "name": "Health",
-            "value": 0.13
+            "value": -0.93
           },
           {
             "name": "Education",
-            "value": 13.75
+            "value": -0.8
           }
         ]
       },
@@ -242,19 +242,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 28.02
+            "value": -0.25
           },
           {
             "name": "Income",
-            "value": 0.29
+            "value": -0.33
           },
           {
             "name": "Health",
-            "value": 0.53
+            "value": -0.13
           },
           {
             "name": "Education",
-            "value": 22.29
+            "value": -0.33
           }
         ]
       },
@@ -293,19 +293,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 52.22
+            "value": 1.1
           },
           {
             "name": "Income",
-            "value": 0.57
-          },
-          {
-            "name": "Health",
             "value": 1.12
           },
           {
+            "name": "Health",
+            "value": 1.06
+          },
+          {
             "name": "Education",
-            "value": 48.66
+            "value": 1.12
           }
         ]
       }
@@ -348,19 +348,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 16.49
+            "value": -1.09
           },
           {
             "name": "Income",
-            "value": 0.19
+            "value": -1.11
           },
           {
             "name": "Health",
-            "value": -0.08
+            "value": -1.13
           },
           {
             "name": "Education",
-            "value": 12.5
+            "value": -1.08
           }
         ]
       },
@@ -399,19 +399,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 62.0
+            "value": 0.88
           },
           {
             "name": "Income",
-            "value": 0.59
+            "value": 0.82
           },
           {
             "name": "Health",
-            "value": 1.55
+            "value": 0.77
           },
           {
             "name": "Education",
-            "value": 80.14
+            "value": 0.89
           }
         ]
       },
@@ -450,19 +450,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 46.37
+            "value": 0.21
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 0.29
           },
           {
             "name": "Health",
-            "value": 1.19
+            "value": 0.35
           },
           {
             "name": "Education",
-            "value": 55.84
+            "value": 0.19
           }
         ]
       }
@@ -503,19 +503,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 12.28
+            "value": -0.85
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -0.76
           },
           {
             "name": "Health",
-            "value": -0.35
+            "value": -0.87
           },
           {
             "name": "Education",
-            "value": 8.99
+            "value": -0.66
           }
         ]
       },
@@ -554,19 +554,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.22
+            "value": -0.26
           },
           {
             "name": "Income",
-            "value": 0.2
+            "value": -0.37
           },
           {
             "name": "Health",
-            "value": 0.12
+            "value": -0.22
           },
           {
             "name": "Education",
-            "value": 13.08
+            "value": -0.49
           }
         ]
       },
@@ -605,19 +605,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 41.83
+            "value": 1.1
           },
           {
             "name": "Income",
-            "value": 0.43
+            "value": 1.13
           },
           {
             "name": "Health",
-            "value": 1.05
+            "value": 1.09
           },
           {
             "name": "Education",
-            "value": 50.94
+            "value": 1.15
           }
         ]
       }
@@ -660,19 +660,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 23.49
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.24
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": 0.36
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 27.38
+            "value": -0.71
           }
         ]
       },
@@ -711,19 +711,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 64.52
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.59
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 1.64
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 77.81
+            "value": 0.71
           }
         ]
       }
@@ -764,19 +764,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 20.45
+            "value": 0.13
           },
           {
             "name": "Income",
-            "value": 0.18
+            "value": 0.01
           },
           {
             "name": "Health",
-            "value": 0.37
+            "value": 0.5
           },
           {
             "name": "Education",
-            "value": 17.47
+            "value": -0.05
           }
         ]
       },
@@ -815,19 +815,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 15.53
+            "value": -0.19
           },
           {
             "name": "Income",
-            "value": 0.16
+            "value": -0.12
           },
           {
             "name": "Health",
-            "value": 0.02
+            "value": 0.08
           },
           {
             "name": "Education",
-            "value": 16.18
+            "value": -0.11
           }
         ]
       },
@@ -866,19 +866,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 6.28
+            "value": -0.79
           },
           {
             "name": "Income",
-            "value": 0.06
+            "value": -0.78
           },
           {
             "name": "Health",
-            "value": -0.89
+            "value": -1.04
           },
           {
             "name": "Education",
-            "value": 2.69
+            "value": -0.72
           }
         ]
       },
@@ -917,19 +917,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 6.43
-          },
-          {
-            "name": "Income",
-            "value": 0.06
-          },
-          {
-            "name": "Health",
             "value": -0.78
           },
           {
+            "name": "Income",
+            "value": -0.78
+          },
+          {
+            "name": "Health",
+            "value": -0.9
+          },
+          {
             "name": "Education",
-            "value": 0.73
+            "value": -0.81
           }
         ]
       },
@@ -968,19 +968,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 43.71
+            "value": 1.64
           },
           {
             "name": "Income",
-            "value": 0.43
+            "value": 1.66
           },
           {
             "name": "Health",
-            "value": 1.07
+            "value": 1.36
           },
           {
             "name": "Education",
-            "value": 55.8
+            "value": 1.68
           }
         ]
       }
@@ -1023,19 +1023,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 34.13
+            "value": -0.42
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": -0.35
           },
           {
             "name": "Health",
-            "value": 0.93
+            "value": -0.35
           },
           {
             "name": "Education",
-            "value": 38.28
+            "value": 0.12
           }
         ]
       },
@@ -1074,19 +1074,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 54.49
+            "value": 1.14
           },
           {
             "name": "Income",
-            "value": 0.61
+            "value": 1.13
           },
           {
             "name": "Health",
-            "value": 1.17
+            "value": 1.13
           },
           {
             "name": "Education",
-            "value": 47.93
+            "value": 0.94
           }
         ]
       },
@@ -1125,19 +1125,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 30.09
+            "value": -0.72
           },
           {
             "name": "Income",
-            "value": 0.34
+            "value": -0.78
           },
           {
             "name": "Health",
-            "value": 0.86
+            "value": -0.78
           },
           {
             "name": "Education",
-            "value": 24.53
+            "value": -1.05
           }
         ]
       }
@@ -1178,19 +1178,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 12.04
+            "value": -0.75
           },
           {
             "name": "Income",
-            "value": 0.13
+            "value": -0.79
           },
           {
             "name": "Health",
-            "value": -0.1
+            "value": -0.83
           },
           {
             "name": "Education",
-            "value": 11.43
+            "value": -0.77
           }
         ]
       },
@@ -1229,19 +1229,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.76
+            "value": 1.14
           },
           {
             "name": "Income",
-            "value": 0.47
+            "value": 1.13
           },
           {
             "name": "Health",
-            "value": 1.27
+            "value": 1.11
           },
           {
             "name": "Education",
-            "value": 44.58
+            "value": 1.13
           }
         ]
       },
@@ -1280,19 +1280,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 18.44
+            "value": -0.39
           },
           {
             "name": "Income",
-            "value": 0.21
+            "value": -0.34
           },
           {
             "name": "Health",
-            "value": 0.29
+            "value": -0.28
           },
           {
             "name": "Education",
-            "value": 18.56
+            "value": -0.36
           }
         ]
       }
@@ -1335,19 +1335,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 32.69
+            "value": -1.15
           },
           {
             "name": "Income",
-            "value": 0.36
+            "value": -1.14
           },
           {
             "name": "Health",
-            "value": 0.82
+            "value": -0.58
           },
           {
             "name": "Education",
-            "value": 43.58
+            "value": -1.05
           }
         ]
       },
@@ -1386,19 +1386,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 47.03
+            "value": 0.51
           },
           {
             "name": "Income",
-            "value": 0.49
+            "value": 0.39
           },
           {
             "name": "Health",
-            "value": 0.82
+            "value": -0.58
           },
           {
             "name": "Education",
-            "value": 63.82
+            "value": 0.94
           }
         ]
       },
@@ -1437,19 +1437,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.19
+            "value": 0.64
           },
           {
             "name": "Income",
-            "value": 0.52
+            "value": 0.74
           },
           {
             "name": "Health",
-            "value": 1.18
+            "value": 1.15
           },
           {
             "name": "Education",
-            "value": 55.43
+            "value": 0.11
           }
         ]
       }
@@ -1490,19 +1490,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.04
+            "value": 1.13
           },
           {
             "name": "Income",
-            "value": 0.47
+            "value": 1.11
           },
           {
             "name": "Health",
-            "value": 1.15
+            "value": 1.12
           },
           {
             "name": "Education",
-            "value": 54.64
+            "value": 1.12
           }
         ]
       },
@@ -1541,19 +1541,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.07
+            "value": -0.37
           },
           {
             "name": "Income",
-            "value": 0.23
+            "value": -0.27
           },
           {
             "name": "Health",
-            "value": 0.25
+            "value": -0.3
           },
           {
             "name": "Education",
-            "value": 21.96
+            "value": -0.32
           }
         ]
       },
@@ -1592,19 +1592,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.69
+            "value": -0.76
           },
           {
             "name": "Income",
-            "value": 0.13
+            "value": -0.84
           },
           {
             "name": "Health",
-            "value": -0.08
+            "value": -0.82
           },
           {
             "name": "Education",
-            "value": 10.86
+            "value": -0.8
           }
         ]
       }
@@ -1647,19 +1647,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 7.56
+            "value": -1.05
           },
           {
             "name": "Income",
-            "value": 0.09
+            "value": -1.08
           },
           {
             "name": "Health",
-            "value": -0.71
+            "value": -1.5
           },
           {
             "name": "Education",
-            "value": 6.7
+            "value": -1.02
           }
         ]
       },
@@ -1698,19 +1698,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.24
+            "value": -0.46
           },
           {
             "name": "Income",
-            "value": 0.19
+            "value": -0.41
           },
           {
             "name": "Health",
-            "value": 0.09
+            "value": -0.31
           },
           {
             "name": "Education",
-            "value": 18.45
+            "value": -0.44
           }
         ]
       },
@@ -1749,11 +1749,11 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 42.56
+            "value": 1.1
           },
           {
             "name": "Income",
-            "value": 0.42
+            "value": 1.12
           },
           {
             "name": "Health",
@@ -1761,7 +1761,7 @@
           },
           {
             "name": "Education",
-            "value": 48.69
+            "value": 1.03
           }
         ]
       },
@@ -1800,19 +1800,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 42.1
+            "value": 1.07
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": 0.98
           },
           {
             "name": "Health",
-            "value": 1.0
+            "value": 1.04
           },
           {
             "name": "Education",
-            "value": 51.97
+            "value": 1.19
           }
         ]
       },
@@ -1851,19 +1851,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.82
+            "value": -0.79
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -0.75
           },
           {
             "name": "Health",
-            "value": -0.2
+            "value": -0.74
           },
           {
             "name": "Education",
-            "value": 10.51
+            "value": -0.83
           }
         ]
       },
@@ -1902,19 +1902,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 28.65
+            "value": 0.25
           },
           {
             "name": "Income",
-            "value": 0.3
+            "value": 0.32
           },
           {
             "name": "Health",
-            "value": 0.84
+            "value": 0.8
           },
           {
             "name": "Education",
-            "value": 31.66
+            "value": 0.2
           }
         ]
       },
@@ -1953,19 +1953,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 15.03
+            "value": -0.59
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.68
           },
           {
             "name": "Health",
-            "value": -0.01
+            "value": -0.46
           },
           {
             "name": "Education",
-            "value": 14.95
+            "value": -0.61
           }
         ]
       },
@@ -2004,19 +2004,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 7.97
+            "value": -1.03
           },
           {
             "name": "Income",
-            "value": 0.1
+            "value": -1.01
           },
           {
             "name": "Health",
-            "value": -0.33
+            "value": -0.94
           },
           {
             "name": "Education",
-            "value": 7.18
+            "value": -0.99
           }
         ]
       },
@@ -2055,19 +2055,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 49.01
+            "value": 1.5
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 1.52
           },
           {
             "name": "Health",
-            "value": 1.11
+            "value": 1.2
           },
           {
             "name": "Education",
-            "value": 57.69
+            "value": 1.47
           }
         ]
       }
@@ -2108,19 +2108,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 12.52
+            "value": -0.6
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -0.37
           },
           {
             "name": "Health",
-            "value": -0.27
+            "value": -0.73
           },
           {
             "name": "Education",
-            "value": 12.02
+            "value": -0.51
           }
         ]
       },
@@ -2159,19 +2159,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 47.24
+            "value": 1.68
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 1.73
           },
           {
             "name": "Health",
-            "value": 0.95
+            "value": 1.16
           },
           {
             "name": "Education",
-            "value": 51.72
+            "value": 1.71
           }
         ]
       },
@@ -2210,19 +2210,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.44
+            "value": -0.15
           },
           {
             "name": "Income",
-            "value": 0.19
+            "value": -0.06
           },
           {
             "name": "Health",
-            "value": 0.18
+            "value": -0.03
           },
           {
             "name": "Education",
-            "value": 16.92
+            "value": -0.24
           }
         ]
       },
@@ -2261,19 +2261,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 8.09
+            "value": -0.89
           },
           {
             "name": "Income",
-            "value": 0.08
+            "value": -0.74
           },
           {
             "name": "Health",
-            "value": -0.58
+            "value": -1.21
           },
           {
             "name": "Education",
-            "value": 5.41
+            "value": -0.88
           }
         ]
       },
@@ -2312,19 +2312,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.13
+            "value": -0.04
           },
           {
             "name": "Income",
-            "value": 0.11
+            "value": -0.56
           },
           {
             "name": "Health",
-            "value": 0.72
+            "value": 0.81
           },
           {
             "name": "Education",
-            "value": 19.63
+            "value": -0.08
           }
         ]
       }
@@ -2367,19 +2367,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 54.7
+            "value": 0.94
           },
           {
             "name": "Income",
-            "value": 0.56
+            "value": 0.79
           },
           {
             "name": "Health",
-            "value": 1.25
+            "value": 0.95
           },
           {
             "name": "Education",
-            "value": 54.65
+            "value": 1.15
           }
         ]
       },
@@ -2418,19 +2418,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 36.38
+            "value": -1.05
           },
           {
             "name": "Income",
-            "value": 0.39
+            "value": -1.13
           },
           {
             "name": "Health",
-            "value": 0.16
+            "value": -1.04
           },
           {
             "name": "Education",
-            "value": 49.82
+            "value": -0.65
           }
         ]
       },
@@ -2469,19 +2469,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 47.17
+            "value": 0.12
           },
           {
             "name": "Income",
-            "value": 0.52
+            "value": 0.34
           },
           {
             "name": "Health",
-            "value": 0.78
+            "value": 0.09
           },
           {
             "name": "Education",
-            "value": 50.24
+            "value": -0.5
           }
         ]
       }
@@ -2522,19 +2522,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.34
+            "value": -0.87
           },
           {
             "name": "Income",
-            "value": 0.22
+            "value": -0.69
           },
           {
             "name": "Health",
-            "value": -0.21
+            "value": -0.99
           },
           {
             "name": "Education",
-            "value": 21.67
+            "value": -0.8
           }
         ]
       },
@@ -2573,19 +2573,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.46
+            "value": 1.09
           },
           {
             "name": "Income",
-            "value": 0.46
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 0.73
+            "value": 1.01
           },
           {
             "name": "Education",
-            "value": 51.67
+            "value": 1.12
           }
         ]
       },
@@ -2624,19 +2624,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 28.09
+            "value": -0.22
           },
           {
             "name": "Income",
-            "value": 0.25
+            "value": -0.46
           },
           {
             "name": "Health",
-            "value": 0.24
+            "value": -0.03
           },
           {
             "name": "Education",
-            "value": 29.07
+            "value": -0.32
           }
         ]
       }
@@ -2679,19 +2679,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 44.39
+            "value": -0.85
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": -0.83
           },
           {
             "name": "Health",
-            "value": 1.59
+            "value": -0.62
           },
           {
             "name": "Education",
-            "value": 41.67
+            "value": -1.0
           }
         ]
       },
@@ -2730,19 +2730,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 70.85
+            "value": 1.1
           },
           {
             "name": "Income",
-            "value": 0.61
+            "value": 1.11
           },
           {
             "name": "Health",
-            "value": 2.43
+            "value": 1.15
           },
           {
             "name": "Education",
-            "value": 57.68
+            "value": 1.0
           }
         ]
       },
@@ -2781,19 +2781,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 52.44
+            "value": -0.25
           },
           {
             "name": "Income",
-            "value": 0.46
+            "value": -0.28
           },
           {
             "name": "Health",
-            "value": 1.63
+            "value": -0.53
           },
           {
             "name": "Education",
-            "value": 49.63
+            "value": -0.0
           }
         ]
       }
@@ -2834,19 +2834,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 28.65
+            "value": -0.22
           },
           {
             "name": "Income",
-            "value": 0.23
+            "value": -0.36
           },
           {
             "name": "Health",
-            "value": 1.22
+            "value": 0.08
           },
           {
             "name": "Education",
-            "value": 24.92
+            "value": -0.19
           }
         ]
       },
@@ -2885,19 +2885,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.01
+            "value": -0.87
           },
           {
             "name": "Income",
-            "value": 0.16
+            "value": -0.77
           },
           {
             "name": "Health",
-            "value": 0.49
+            "value": -1.04
           },
           {
             "name": "Education",
-            "value": 12.04
+            "value": -0.89
           }
         ]
       },
@@ -2936,19 +2936,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 52.42
+            "value": 1.09
           },
           {
             "name": "Income",
-            "value": 0.49
+            "value": 1.13
           },
           {
             "name": "Health",
-            "value": 1.79
+            "value": 0.96
           },
           {
             "name": "Education",
-            "value": 48.64
+            "value": 1.08
           }
         ]
       }
@@ -2991,19 +2991,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 24.17
+            "value": 1.38
           },
           {
             "name": "Income",
-            "value": 0.3
+            "value": 1.95
           },
           {
             "name": "Health",
-            "value": -0.11
+            "value": 0.86
           },
           {
             "name": "Education",
-            "value": 17.01
+            "value": 2.64
           }
         ]
       },
@@ -3042,19 +3042,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 13.88
+            "value": -0.03
           },
           {
             "name": "Income",
-            "value": 0.17
+            "value": 0.0
           },
           {
             "name": "Health",
-            "value": -0.66
+            "value": -0.07
           },
           {
             "name": "Education",
-            "value": 7.71
+            "value": 0.42
           }
         ]
       },
@@ -3093,19 +3093,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 6.18
+            "value": -1.09
           },
           {
             "name": "Income",
-            "value": 0.09
+            "value": -1.2
           },
           {
             "name": "Health",
-            "value": -1.11
+            "value": -0.84
           },
           {
             "name": "Education",
-            "value": 3.39
+            "value": -0.62
           }
         ]
       },
@@ -3144,19 +3144,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 5.29
+            "value": -1.21
           },
           {
             "name": "Income",
-            "value": 0.09
+            "value": -1.2
           },
           {
             "name": "Health",
-            "value": -1.29
+            "value": -1.14
           },
           {
             "name": "Education",
-            "value": 3.52
+            "value": -0.59
           }
         ]
       },
@@ -3195,19 +3195,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 15.89
+            "value": 0.24
           },
           {
             "name": "Income",
-            "value": 0.17
+            "value": 0.0
           },
           {
             "name": "Health",
-            "value": -0.31
+            "value": 0.52
           },
           {
             "name": "Education",
-            "value": 3.5
+            "value": -0.59
           }
         ]
       },
@@ -3246,19 +3246,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 10.27
+            "value": -0.53
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.3
           },
           {
             "name": "Health",
-            "value": -0.96
+            "value": -0.58
           },
           {
             "name": "Education",
-            "value": 5.5
+            "value": -0.11
           }
         ]
       },
@@ -3297,19 +3297,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 13.27
+            "value": -0.12
           },
           {
             "name": "Income",
-            "value": 0.17
+            "value": 0.0
           },
           {
             "name": "Health",
-            "value": -0.82
+            "value": -0.35
           },
           {
             "name": "Education",
-            "value": 5.87
+            "value": -0.02
           }
         ]
       },
@@ -3348,19 +3348,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.39
+            "value": -0.37
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.3
           },
           {
             "name": "Health",
-            "value": -1.12
+            "value": -0.85
           },
           {
             "name": "Education",
-            "value": 6.99
+            "value": 0.24
           }
         ]
       },
@@ -3399,19 +3399,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.82
+            "value": 0.51
           },
           {
             "name": "Income",
-            "value": 0.21
+            "value": 0.6
           },
           {
             "name": "Health",
-            "value": -0.15
+            "value": 0.79
           },
           {
             "name": "Education",
-            "value": 4.91
+            "value": -0.25
           }
         ]
       },
@@ -3450,19 +3450,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 29.35
+            "value": 2.09
           },
           {
             "name": "Income",
-            "value": 0.27
+            "value": 1.5
           },
           {
             "name": "Health",
-            "value": 0.35
+            "value": 1.64
           },
           {
             "name": "Education",
-            "value": 11.1
+            "value": 1.23
           }
         ]
       },
@@ -3501,19 +3501,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 4.01
+            "value": -1.39
           },
           {
             "name": "Income",
-            "value": 0.08
+            "value": -1.35
           },
           {
             "name": "Health",
-            "value": -1.62
+            "value": -1.7
           },
           {
             "name": "Education",
-            "value": 1.45
+            "value": -1.08
           }
         ]
       },
@@ -3552,19 +3552,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 13.38
+            "value": -0.1
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -0.45
           },
           {
             "name": "Health",
-            "value": -0.24
+            "value": 0.64
           },
           {
             "name": "Education",
-            "value": 2.07
+            "value": -0.93
           }
         ]
       },
@@ -3603,19 +3603,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 18.55
+            "value": 0.61
           },
           {
             "name": "Income",
-            "value": 0.22
+            "value": 0.75
           },
           {
             "name": "Health",
-            "value": 0.03
+            "value": 1.09
           },
           {
             "name": "Education",
-            "value": 4.64
+            "value": -0.32
           }
         ]
       }
@@ -3656,19 +3656,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 31.31
+            "value": 0.99
           },
           {
             "name": "Income",
-            "value": 0.39
+            "value": 1.06
           },
           {
             "name": "Health",
-            "value": 0.21
+            "value": 0.9
           },
           {
             "name": "Education",
-            "value": 23.41
+            "value": 1.12
           }
         ]
       },
@@ -3707,19 +3707,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.23
+            "value": -1.01
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -0.93
           },
           {
             "name": "Health",
-            "value": -0.88
+            "value": -1.08
           },
           {
             "name": "Education",
-            "value": 6.32
+            "value": -0.79
           }
         ]
       },
@@ -3758,19 +3758,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.58
+            "value": 0.02
           },
           {
             "name": "Income",
-            "value": 0.24
+            "value": -0.13
           },
           {
             "name": "Health",
-            "value": -0.19
+            "value": 0.18
           },
           {
             "name": "Education",
-            "value": 10.48
+            "value": -0.33
           }
         ]
       }
@@ -3813,19 +3813,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 39.2
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.37
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": 1.11
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 27.59
+            "value": -0.71
           }
         ]
       },
@@ -3864,19 +3864,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.42
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 1.52
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 36.57
+            "value": 0.71
           }
         ]
       }
@@ -3917,19 +3917,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 23.25
+            "value": -0.59
           },
           {
             "name": "Income",
-            "value": 0.2
+            "value": -0.46
           },
           {
             "name": "Health",
-            "value": 0.72
+            "value": -0.63
           },
           {
             "name": "Education",
-            "value": 12.83
+            "value": -0.59
           }
         ]
       },
@@ -3968,19 +3968,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 53.8
+            "value": 1.52
           },
           {
             "name": "Income",
-            "value": 0.53
+            "value": 1.41
           },
           {
             "name": "Health",
-            "value": 1.44
+            "value": 0.96
           },
           {
             "name": "Education",
-            "value": 40.86
+            "value": 1.58
           }
         ]
       },
@@ -4019,19 +4019,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 41.66
+            "value": 0.68
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": 0.67
           },
           {
             "name": "Health",
-            "value": 1.16
+            "value": 0.34
           },
           {
             "name": "Education",
-            "value": 27.05
+            "value": 0.51
           }
         ]
       },
@@ -4070,19 +4070,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.42
+            "value": 1.15
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 1.12
           },
           {
             "name": "Health",
-            "value": 1.52
+            "value": 1.14
           },
           {
             "name": "Education",
-            "value": 36.57
+            "value": 1.25
           }
         ]
       },
@@ -4121,19 +4121,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 9.23
+            "value": -1.56
           },
           {
             "name": "Income",
-            "value": 0.04
+            "value": -1.37
           },
           {
             "name": "Health",
-            "value": 0.61
+            "value": -0.87
           },
           {
             "name": "Education",
-            "value": 0.28
+            "value": -1.56
           }
         ]
       },
@@ -4172,19 +4172,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.35
+            "value": -0.86
           },
           {
             "name": "Income",
-            "value": 0.16
+            "value": -0.69
           },
           {
             "name": "Health",
-            "value": 0.18
+            "value": -1.82
           },
           {
             "name": "Education",
-            "value": 6.07
+            "value": -1.11
           }
         ]
       },
@@ -4223,19 +4223,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 29.77
+            "value": -0.14
           },
           {
             "name": "Income",
-            "value": 0.26
+            "value": -0.12
           },
           {
             "name": "Health",
-            "value": 1.14
+            "value": 0.3
           },
           {
             "name": "Education",
-            "value": 20.66
+            "value": 0.02
           }
         ]
       },
@@ -4274,19 +4274,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 33.76
+            "value": 0.13
           },
           {
             "name": "Income",
-            "value": 0.33
+            "value": 0.27
           },
           {
             "name": "Health",
-            "value": 1.24
+            "value": 0.52
           },
           {
             "name": "Education",
-            "value": 17.91
+            "value": -0.19
           }
         ]
       },
@@ -4325,19 +4325,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.93
+            "value": -0.96
           },
           {
             "name": "Income",
-            "value": 0.02
+            "value": -1.48
           },
           {
             "name": "Health",
-            "value": 0.59
+            "value": -0.92
           },
           {
             "name": "Education",
-            "value": 13.65
+            "value": -0.52
           }
         ]
       },
@@ -4376,19 +4376,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 41.18
+            "value": 0.65
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": 0.67
           },
           {
             "name": "Health",
-            "value": 1.45
+            "value": 0.98
           },
           {
             "name": "Education",
-            "value": 28.14
+            "value": 0.6
           }
         ]
       }
@@ -4431,19 +4431,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.01
+            "value": -0.68
           },
           {
             "name": "Income",
-            "value": 0.45
+            "value": -0.69
           },
           {
             "name": "Health",
-            "value": 1.35
+            "value": -0.52
           },
           {
             "name": "Education",
-            "value": 48.08
+            "value": -0.87
           }
         ]
       },
@@ -4482,19 +4482,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 63.52
+            "value": 1.15
           },
           {
             "name": "Income",
-            "value": 0.61
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 1.81
+            "value": 1.15
           },
           {
             "name": "Education",
-            "value": 62.18
+            "value": 1.09
           }
         ]
       },
@@ -4533,19 +4533,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 47.14
+            "value": -0.47
           },
           {
             "name": "Income",
-            "value": 0.47
+            "value": -0.46
           },
           {
             "name": "Health",
-            "value": 1.32
+            "value": -0.63
           },
           {
             "name": "Education",
-            "value": 52.75
+            "value": -0.22
           }
         ]
       }
@@ -4586,19 +4586,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 14.46
+            "value": -0.46
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.23
           },
           {
             "name": "Health",
-            "value": 0.17
+            "value": -0.35
           },
           {
             "name": "Education",
-            "value": 13.73
+            "value": -0.25
           }
         ]
       },
@@ -4637,19 +4637,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 7.0
+            "value": -0.89
           },
           {
             "name": "Income",
-            "value": 0.07
+            "value": -0.68
           },
           {
             "name": "Health",
-            "value": -0.53
+            "value": -1.33
           },
           {
             "name": "Education",
-            "value": 3.89
+            "value": -0.71
           }
         ]
       },
@@ -4688,19 +4688,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 16.76
+            "value": -0.32
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.23
           },
           {
             "name": "Health",
-            "value": 0.42
+            "value": -0.0
           },
           {
             "name": "Education",
-            "value": 12.82
+            "value": -0.29
           }
         ]
       },
@@ -4739,19 +4739,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 51.21
+            "value": 1.7
           },
           {
             "name": "Income",
-            "value": 0.5
+            "value": 1.75
           },
           {
             "name": "Health",
-            "value": 1.44
+            "value": 1.43
           },
           {
             "name": "Education",
-            "value": 56.54
+            "value": 1.76
           }
         ]
       },
@@ -4790,19 +4790,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.71
+            "value": -0.03
           },
           {
             "name": "Income",
-            "value": 0.08
+            "value": -0.62
           },
           {
             "name": "Health",
-            "value": 0.6
+            "value": 0.25
           },
           {
             "name": "Education",
-            "value": 8.52
+            "value": -0.5
           }
         ]
       }
@@ -4845,19 +4845,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 41.69
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.43
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 1.09
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 40.43
+            "value": 0.71
           }
         ]
       },
@@ -4896,19 +4896,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.92
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.19
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": 0.47
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 22.27
+            "value": -0.71
           }
         ]
       }
@@ -4949,19 +4949,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.11
+            "value": -0.78
           },
           {
             "name": "Income",
-            "value": 0.17
+            "value": -0.64
           },
           {
             "name": "Health",
-            "value": 0.24
+            "value": -0.85
           },
           {
             "name": "Education",
-            "value": 15.51
+            "value": -0.78
           }
         ]
       },
@@ -5000,19 +5000,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.96
+            "value": 1.13
           },
           {
             "name": "Income",
-            "value": 0.47
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 1.24
+            "value": 1.1
           },
           {
             "name": "Education",
-            "value": 44.07
+            "value": 1.13
           }
         ]
       },
@@ -5051,19 +5051,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 23.57
+            "value": -0.35
           },
           {
             "name": "Income",
-            "value": 0.19
+            "value": -0.52
           },
           {
             "name": "Health",
-            "value": 0.55
+            "value": -0.25
           },
           {
             "name": "Education",
-            "value": 22.07
+            "value": -0.34
           }
         ]
       }
@@ -5106,19 +5106,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 33.74
+            "value": 0.35
           },
           {
             "name": "Income",
-            "value": 0.37
+            "value": 0.52
           },
           {
             "name": "Health",
-            "value": 0.81
+            "value": 0.26
           },
           {
             "name": "Education",
-            "value": 48.01
+            "value": 0.7
           }
         ]
       },
@@ -5157,19 +5157,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 41.1
+            "value": 1.17
           },
           {
             "name": "Income",
-            "value": 0.43
+            "value": 1.13
           },
           {
             "name": "Health",
-            "value": 1.12
+            "value": 1.17
           },
           {
             "name": "Education",
-            "value": 52.69
+            "value": 1.01
           }
         ]
       },
@@ -5208,19 +5208,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 20.03
+            "value": -1.18
           },
           {
             "name": "Income",
-            "value": 0.22
+            "value": -1.03
           },
           {
             "name": "Health",
-            "value": 0.3
+            "value": -1.24
           },
           {
             "name": "Education",
-            "value": 25.91
+            "value": -0.77
           }
         ]
       },
@@ -5259,19 +5259,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 27.55
+            "value": -0.34
           },
           {
             "name": "Income",
-            "value": 0.26
+            "value": -0.62
           },
           {
             "name": "Health",
-            "value": 0.66
+            "value": -0.18
           },
           {
             "name": "Education",
-            "value": 23.3
+            "value": -0.94
           }
         ]
       }
@@ -5312,19 +5312,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.04
+            "value": -0.88
           },
           {
             "name": "Income",
-            "value": 0.12
+            "value": -0.86
           },
           {
             "name": "Health",
-            "value": -0.13
+            "value": -0.91
           },
           {
             "name": "Education",
-            "value": 10.49
+            "value": -0.88
           }
         ]
       },
@@ -5363,19 +5363,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 13.29
+            "value": -0.72
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.64
           },
           {
             "name": "Health",
-            "value": -0.05
+            "value": -0.78
           },
           {
             "name": "Education",
-            "value": 16.3
+            "value": -0.55
           }
         ]
       },
@@ -5414,19 +5414,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 42.41
+            "value": 1.26
           },
           {
             "name": "Income",
-            "value": 0.43
+            "value": 1.35
           },
           {
             "name": "Health",
-            "value": 1.12
+            "value": 1.1
           },
           {
             "name": "Education",
-            "value": 50.51
+            "value": 1.38
           }
         ]
       },
@@ -5465,19 +5465,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 28.78
+            "value": 0.33
           },
           {
             "name": "Income",
-            "value": 0.26
+            "value": 0.14
           },
           {
             "name": "Health",
-            "value": 0.81
+            "value": 0.6
           },
           {
             "name": "Education",
-            "value": 26.96
+            "value": 0.05
           }
         ]
       }
@@ -5520,19 +5520,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 9.93
+            "value": -1.02
           },
           {
             "name": "Income",
-            "value": 0.12
+            "value": -0.87
           },
           {
             "name": "Health",
-            "value": -0.36
+            "value": -1.07
           },
           {
             "name": "Education",
-            "value": 13.49
+            "value": -0.86
           }
         ]
       },
@@ -5571,19 +5571,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.46
-          },
-          {
-            "name": "Income",
-            "value": 0.18
-          },
-          {
-            "name": "Health",
             "value": 0.05
           },
           {
+            "name": "Income",
+            "value": -0.22
+          },
+          {
+            "name": "Health",
+            "value": 0.16
+          },
+          {
             "name": "Education",
-            "value": 19.91
+            "value": -0.24
           }
         ]
       },
@@ -5622,19 +5622,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 27.69
+            "value": 0.97
           },
           {
             "name": "Income",
-            "value": 0.3
+            "value": 1.09
           },
           {
             "name": "Health",
-            "value": 0.3
+            "value": 0.91
           },
           {
             "name": "Education",
-            "value": 34.0
+            "value": 1.1
           }
         ]
       }
@@ -5675,19 +5675,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.07
+            "value": -0.51
           },
           {
             "name": "Income",
-            "value": 0.18
+            "value": -0.58
           },
           {
             "name": "Health",
-            "value": -0.04
+            "value": -0.54
           },
           {
             "name": "Education",
-            "value": 18.05
+            "value": -0.61
           }
         ]
       },
@@ -5726,19 +5726,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.25
+            "value": 1.15
           },
           {
             "name": "Income",
-            "value": 0.47
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 1.16
+            "value": 1.15
           },
           {
             "name": "Education",
-            "value": 55.98
+            "value": 1.15
           }
         ]
       },
@@ -5777,19 +5777,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 16.71
+            "value": -0.64
           },
           {
             "name": "Income",
-            "value": 0.18
+            "value": -0.58
           },
           {
             "name": "Health",
-            "value": -0.09
+            "value": -0.61
           },
           {
             "name": "Education",
-            "value": 19.58
+            "value": -0.54
           }
         ]
       }
@@ -5832,19 +5832,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.38
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.25
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": 0.0
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 24.86
+            "value": -0.71
           }
         ]
       },
@@ -5883,19 +5883,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 38.08
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.44
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 0.63
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 52.47
+            "value": 0.71
           }
         ]
       }
@@ -5936,19 +5936,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 27.95
+            "value": 1.15
           },
           {
             "name": "Income",
-            "value": 0.31
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 0.34
+            "value": 1.15
           },
           {
             "name": "Education",
-            "value": 37.59
+            "value": 1.15
           }
         ]
       },
@@ -5987,19 +5987,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 10.5
+            "value": -0.64
           },
           {
             "name": "Income",
-            "value": 0.12
+            "value": -0.62
           },
           {
             "name": "Health",
-            "value": -0.52
+            "value": -0.62
           },
           {
             "name": "Education",
-            "value": 11.45
+            "value": -0.55
           }
         ]
       },
@@ -6038,19 +6038,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 11.75
+            "value": -0.51
           },
           {
             "name": "Income",
-            "value": 0.13
+            "value": -0.53
           },
           {
             "name": "Health",
-            "value": -0.48
+            "value": -0.54
           },
           {
             "name": "Education",
-            "value": 10.71
+            "value": -0.6
           }
         ]
       }
@@ -6093,19 +6093,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 32.14
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.33
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 0.72
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 35.26
+            "value": 0.71
           }
         ]
       },
@@ -6144,19 +6144,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 15.04
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": 0.03
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 8.28
+            "value": -0.71
           }
         ]
       }
@@ -6197,19 +6197,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 46.96
+            "value": 1.14
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 1.27
+            "value": 1.08
           },
           {
             "name": "Education",
-            "value": 53.62
+            "value": 1.15
           }
         ]
       },
@@ -6248,19 +6248,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 17.49
+            "value": -0.39
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -0.48
           },
           {
             "name": "Health",
-            "value": 0.32
+            "value": -0.19
           },
           {
             "name": "Education",
-            "value": 13.82
+            "value": -0.46
           }
         ]
       },
@@ -6299,19 +6299,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 10.79
+            "value": -0.74
           },
           {
             "name": "Income",
-            "value": 0.11
+            "value": -0.67
           },
           {
             "name": "Health",
-            "value": -0.21
+            "value": -0.89
           },
           {
             "name": "Education",
-            "value": 8.25
+            "value": -0.69
           }
         ]
       }
@@ -6354,19 +6354,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 26.73
+            "value": 0.71
           },
           {
             "name": "Income",
-            "value": 0.27
+            "value": 0.71
           },
           {
             "name": "Health",
-            "value": 0.6
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 29.8
+            "value": 0.71
           }
         ]
       },
@@ -6405,19 +6405,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 9.79
+            "value": -0.71
           },
           {
             "name": "Income",
-            "value": 0.13
+            "value": -0.71
           },
           {
             "name": "Health",
-            "value": -0.3
+            "value": -0.71
           },
           {
             "name": "Education",
-            "value": 9.69
+            "value": -0.71
           }
         ]
       }
@@ -6458,19 +6458,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 42.73
+            "value": 1.14
           },
           {
             "name": "Income",
-            "value": 0.42
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 1.17
+            "value": 1.1
           },
           {
             "name": "Education",
-            "value": 49.09
+            "value": 1.15
           }
         ]
       },
@@ -6509,19 +6509,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 16.49
+            "value": -0.74
           },
           {
             "name": "Income",
-            "value": 0.18
+            "value": -0.69
           },
           {
             "name": "Health",
-            "value": 0.18
+            "value": -0.85
           },
           {
             "name": "Education",
-            "value": 17.22
+            "value": -0.68
           }
         ]
       },
@@ -6560,19 +6560,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 21.13
+            "value": -0.4
           },
           {
             "name": "Income",
-            "value": 0.21
+            "value": -0.46
           },
           {
             "name": "Health",
-            "value": 0.48
+            "value": -0.26
           },
           {
             "name": "Education",
-            "value": 21.06
+            "value": -0.46
           }
         ]
       }
@@ -6615,19 +6615,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 50.92
+            "value": 0.93
           },
           {
             "name": "Income",
-            "value": 0.49
+            "value": 0.8
           },
           {
             "name": "Health",
-            "value": 1.46
+            "value": 0.85
           },
           {
             "name": "Education",
-            "value": 58.2
+            "value": 0.91
           }
         ]
       },
@@ -6666,19 +6666,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 13.96
+            "value": -1.55
           },
           {
             "name": "Income",
-            "value": 0.14
+            "value": -1.61
           },
           {
             "name": "Health",
-            "value": 0.27
+            "value": -1.55
           },
           {
             "name": "Education",
-            "value": 17.14
+            "value": -1.53
           }
         ]
       },
@@ -6717,19 +6717,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 48.74
+            "value": 0.78
           },
           {
             "name": "Income",
-            "value": 0.5
+            "value": 0.86
           },
           {
             "name": "Health",
-            "value": 1.45
+            "value": 0.83
           },
           {
             "name": "Education",
-            "value": 51.32
+            "value": 0.5
           }
         ]
       },
@@ -6768,19 +6768,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 32.45
+            "value": -0.31
           },
           {
             "name": "Income",
-            "value": 0.35
+            "value": -0.16
           },
           {
             "name": "Health",
-            "value": 0.86
+            "value": -0.36
           },
           {
             "name": "Education",
-            "value": 34.89
+            "value": -0.47
           }
         ]
       },
@@ -6819,19 +6819,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 39.26
+            "value": 0.15
           },
           {
             "name": "Income",
-            "value": 0.39
+            "value": 0.11
           },
           {
             "name": "Health",
-            "value": 1.16
+            "value": 0.24
           },
           {
             "name": "Education",
-            "value": 52.81
+            "value": 0.59
           }
         ]
       }
@@ -6872,19 +6872,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 42.84
+            "value": 0.49
           },
           {
             "name": "Income",
-            "value": 0.4
+            "value": 0.39
           },
           {
             "name": "Health",
-            "value": 1.22
+            "value": 0.44
           },
           {
             "name": "Education",
-            "value": 44.33
+            "value": 0.39
           }
         ]
       },
@@ -6923,19 +6923,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 14.77
+            "value": -1.15
           },
           {
             "name": "Income",
-            "value": 0.15
+            "value": -1.14
           },
           {
             "name": "Health",
-            "value": 0.34
+            "value": -1.14
           },
           {
             "name": "Education",
-            "value": 17.46
+            "value": -1.14
           }
         ]
       },
@@ -6974,19 +6974,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.79
+            "value": 0.66
           },
           {
             "name": "Income",
-            "value": 0.46
+            "value": 0.75
           },
           {
             "name": "Health",
-            "value": 1.37
+            "value": 0.71
           },
           {
             "name": "Education",
-            "value": 50.53
+            "value": 0.74
           }
         ]
       }
@@ -7029,19 +7029,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 40.67
+            "value": 1.14
           },
           {
             "name": "Income",
-            "value": 0.45
+            "value": 1.15
           },
           {
             "name": "Health",
-            "value": 0.91
+            "value": 1.13
           },
           {
             "name": "Education",
-            "value": 39.38
+            "value": 1.12
           }
         ]
       },
@@ -7080,19 +7080,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 19.42
+            "value": -0.42
           },
           {
             "name": "Income",
-            "value": 0.2
+            "value": -0.51
           },
           {
             "name": "Health",
-            "value": 0.22
+            "value": -0.37
           },
           {
             "name": "Education",
-            "value": 19.34
+            "value": -0.32
           }
         ]
       },
@@ -7131,19 +7131,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 15.44
+            "value": -0.72
           },
           {
             "name": "Income",
-            "value": 0.18
+            "value": -0.64
           },
           {
             "name": "Health",
-            "value": 0.04
+            "value": -0.76
           },
           {
             "name": "Education",
-            "value": 12.67
+            "value": -0.8
           }
         ]
       }
@@ -7184,19 +7184,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 45.07
+            "value": 1.0
           },
           {
             "name": "Income",
-            "value": 0.48
+            "value": 0.95
           },
           {
             "name": "Health",
-            "value": 1.05
+            "value": 0.98
           },
           {
             "name": "Education",
-            "value": 38.82
+            "value": 0.85
           }
         ]
       },
@@ -7235,19 +7235,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 40.54
+            "value": 0.72
           },
           {
             "name": "Income",
-            "value": 0.45
+            "value": 0.78
           },
           {
             "name": "Health",
-            "value": 0.92
+            "value": 0.75
           },
           {
             "name": "Education",
-            "value": 39.21
+            "value": 0.88
           }
         ]
       },
@@ -7286,19 +7286,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 14.34
+            "value": -0.88
           },
           {
             "name": "Income",
-            "value": 0.16
+            "value": -0.89
           },
           {
             "name": "Health",
-            "value": 0.01
+            "value": -0.87
           },
           {
             "name": "Education",
-            "value": 13.04
+            "value": -0.87
           }
         ]
       },
@@ -7337,19 +7337,19 @@
         "imd": [
           {
             "name": "IMD Score",
-            "value": 14.86
+            "value": -0.84
           },
           {
             "name": "Income",
-            "value": 0.17
+            "value": -0.83
           },
           {
             "name": "Health",
-            "value": 0.02
+            "value": -0.85
           },
           {
             "name": "Education",
-            "value": 13.26
+            "value": -0.86
           }
         ]
       }

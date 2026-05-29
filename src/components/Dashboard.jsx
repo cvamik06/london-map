@@ -38,7 +38,7 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
 
   return (
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
-      <h2>Metropolitan Police Analytical Dashboard</h2>
+      <h2>Police Analytical Dashboard</h2>
       
       {/* ---------------- CITY SELECTOR DROPDOWN ---------------- */}
       <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -50,26 +50,26 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
         >
           {/* Dynamically list cities based on the JSON keys */}
           {Object.keys(clusterProfiles).map(city => (
-            <option key={city} value={city}>{city} Constabulary</option>
+            <option key={city} value={city}>{city} </option>
           ))}
         </select>
       </div>
 
       {/* ---------------- THE MODEL TOGGLE ---------------- */}
       <div style={{ marginBottom: '25px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', display: 'flex', gap: '15px', alignItems: 'center' }}>
-        <strong style={{ color: '#495057' }}>Clustering Algorithm:</strong>
+        <strong style={{ color: '#495057' }}>Clustering Type:</strong>
         <div style={{ display: 'flex', backgroundColor: '#e9ecef', borderRadius: '6px', padding: '4px' }}>
           <button 
             onClick={() => setActiveModel('kmeans')}
             style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'kmeans' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'kmeans' ? 'bold' : 'normal', boxShadow: activeModel === 'kmeans' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
           >
-            K-Means (Balanced)
+            Balanced
           </button>
           <button 
             onClick={() => setActiveModel('dbscan')}
             style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'dbscan' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'dbscan' ? 'bold' : 'normal', boxShadow: activeModel === 'dbscan' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
           >
-            DBSCAN (Hotspots)
+           Hotspots
           </button>
         </div>
       </div>
