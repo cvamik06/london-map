@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import Map, { Source, Layer, Popup } from 'react-map-gl/mapbox';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import { cityConfigs } from '../data/cityConfig'; 
@@ -8,8 +8,13 @@ const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 export default function MapView({ selectedCity, selectedCluster, activeModel }) {
   const activeClusterId = parseInt(selectedCluster.replace('C', ''));
   const [hoverInfo, setHoverInfo] = useState(null);
-  
   const [mapData, setMapData] = useState(null);
+  
+  // --- Search State & Map Reference ---
+  const mapRef = useRef();
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showSuggestions, setShowSuggestions] = useState(false);
+
   const cityData = cityConfigs[selectedCity] || cityConfigs["London"];
 
   useEffect(() => {
@@ -20,22 +25,56 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
     .then(([geojsonData, clusterData]) => {
       geojsonData.features = geojsonData.features.map(feature => {
         const lsoaCode = feature.properties.LSOA21CD; 
-        
         const stats = clusterData[lsoaCode] || { kmeans_cluster: null, dbscan_cluster: null, City_Group: 'None' };
-        
         return {
           ...feature,
-          properties: {
-            ...feature.properties,
-            ...stats 
-          }
+          properties: { ...feature.properties, ...stats }
         };
       });
-
       setMapData(geojsonData);
     })
     .catch(err => console.error("Error loading map data:", err));
   }, []);
+
+  // --- Search Filtering Logic ---
+  const searchResults = useMemo(() => {
+    if (!searchTerm || !mapData) return [];
+    const term = searchTerm.toLowerCase();
+    
+    return mapData.features.filter(f => {
+      const props = f.properties;
+      const name = props['LSOA name (2021)'] || props['LSOA Name'] || "";
+      // Only show suggestions for the currently selected city
+      return props.City_Group === selectedCity && name.toLowerCase().includes(term);
+    }).slice(0, 5); // Limit to top 5 results for clean UI
+  }, [searchTerm, mapData, selectedCity]);
+
+  // --- Fly-to Location Logic ---
+  const handleSelectNeighborhood = (feature) => {
+    const props = feature.properties;
+    const name = props['LSOA name (2021)'] || props['LSOA Name'];
+    setSearchTerm(name);
+    setShowSuggestions(false);
+
+    // Calculate the rough center of the polygon to tell Mapbox where to fly
+    const coords = feature.geometry.type === 'Polygon' 
+      ? feature.geometry.coordinates[0] 
+      : feature.geometry.coordinates[0][0]; // Handles MultiPolygons
+
+    let lngSum = 0, latSum = 0;
+    coords.forEach(c => { lngSum += c[0]; latSum += c[1] });
+    const centerLng = lngSum / coords.length;
+    const centerLat = latSum / coords.length;
+
+    // Trigger the Mapbox camera animation
+    mapRef.current?.flyTo({
+      center: [centerLng, centerLat],
+      zoom: 14, // Zoom in tight on the specific neighborhood
+      duration: 1500 // 1.5 second smooth animation
+    });
+
+    setHoverInfo({ longitude: centerLng, latitude: centerLat, properties: props });
+  };
 
   const clusterColors = {
     0: '#1f77b4', 1: '#ff7f0e', 2: '#2ca02c', 3: '#9467bd', 4: '#d62728'
@@ -77,7 +116,40 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
 
   return (
     <div style={{ position: 'relative', height: '100%', width: '100%', borderRadius: '8px', overflow: 'hidden', backgroundColor: '#e5e5e5' }}>
+      
+      {/* FLOATING SEARCH BAR UI */}
+      <div style={{ position: 'absolute', top: 15, left: 15, zIndex: 10, width: '300px' }}>
+        <input 
+          type="text" 
+          placeholder={`Search in ${selectedCity}...`}
+          value={searchTerm}
+          onChange={(e) => {
+            setSearchTerm(e.target.value);
+            setShowSuggestions(true);
+          }}
+          onFocus={() => setShowSuggestions(true)}
+          style={{ width: '100%', padding: '10px 15px', borderRadius: '6px', border: '1px solid #ccc', boxShadow: '0 2px 6px rgba(0,0,0,0.15)', fontSize: '14px', outline: 'none' }}
+        />
+        
+        {showSuggestions && searchResults.length > 0 && (
+          <div style={{ marginTop: '5px', backgroundColor: 'white', borderRadius: '6px', boxShadow: '0 4px 12px rgba(0,0,0,0.1)', overflow: 'hidden' }}>
+            {searchResults.map((feature, idx) => (
+              <div 
+                key={idx}
+                onClick={() => handleSelectNeighborhood(feature)}
+                style={{ padding: '10px 15px', cursor: 'pointer', borderBottom: idx !== searchResults.length - 1 ? '1px solid #eee' : 'none', fontSize: '13px' }}
+                onMouseEnter={(e) => e.target.style.backgroundColor = '#f5f5f5'}
+                onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+              >
+                {feature.properties['LSOA name (2021)'] || feature.properties['LSOA Name']}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
       <Map
+        ref={mapRef} 
         key={selectedCity} 
         initialViewState={cityData.center} 
         maxBounds={[ [-11.0, 49.5], [3.0, 61.0] ]}
@@ -88,6 +160,7 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
         interactiveLayerIds={activeModel === 'kmeans' ? ['kmeans-layer'] : ['dbscan-layer']}
         onMouseMove={onHover}
         onMouseLeave={() => setHoverInfo(null)}
+        onClick={() => setShowSuggestions(false)} // Close search on map click
       >
         {mapData && (
           <Source type="geojson" data={mapData}>
