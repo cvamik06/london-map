@@ -34,8 +34,28 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
     return <div style={{ padding: '20px' }}>Loading city data...</div>;
   }
 
-  const alertStyles = getAlertStyles(activeClusterData.alertLevel);
+//  const alertStyles = getAlertStyles(activeClusterData.alertLevel);
 
+    // This reads the cluster's name and overrides the JSON if there is a mismatch
+    const getCalculatedLevel = (cluster) => {
+      if (!cluster) return 'low';
+      const name = (cluster.name || "").toLowerCase();
+
+      if (name.includes('critical') || name.includes('severe') || name.includes('high')) {
+        return 'critical';
+      }
+      if (name.includes('moderate') || name.includes('medium') || name.includes('elevated')) {
+        return 'medium';
+      }
+      if (name.includes('low') || name.includes('stable')) {
+        return 'low';
+      }
+      // Fallback to the JSON if the name doesn't contain any keywords
+      return cluster.alertLevel || 'low';
+    };
+
+    const currentLevel = getCalculatedLevel(activeClusterData);
+    const alertStyles = getAlertStyles(currentLevel);
   return (
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
       <h2>Police Analytical Dashboard</h2>
@@ -74,18 +94,54 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
         </div>
       </div>
 
+
       {/* ---------------- UNIFIED CHART RENDER ---------------- */}
       {/* Dynamic Cluster Buttons based on what the active model contains */}
-      <div style={{ display: 'flex', gap: '8px', marginBottom: '20px', flexWrap: 'wrap' }}>
-        {Object.keys(activeModelData).map(key => (
-          <button 
-            key={key} 
-            onClick={() => setSelectedCluster(key)}
-            style={{ padding: '8px 16px', backgroundColor: selectedCluster === key ? '#003366' : '#f0f0f0', color: selectedCluster === key ? 'white' : '#333', border: 'none', borderRadius: '4px', cursor: 'pointer', fontWeight: 'bold' }}
-          >
-            {key} - {activeModelData[key].name}
-          </button>
-        ))}
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px', flexWrap: 'wrap' }}>
+        {Object.keys(activeModelData).map(key => {
+          const isSelected = selectedCluster === key;
+          //use calculated level from name
+          const level = getCalculatedLevel(activeModelData[key]); 
+
+          let baseColor;
+          if (level === 'low') {
+            baseColor = '#0F766E'; // Deep Slate-Teal
+          } else if (level === 'medium') {
+            baseColor = '#B45309'; // Burnt Amber
+          } else { 
+            baseColor = '#9F1239'; // Dark Crimson
+          }
+          return (
+            <button 
+              key={key} 
+              onClick={() => setSelectedCluster(key)}
+              style={{ 
+                padding: '10px 18px', 
+                backgroundColor: baseColor, // FIXED
+                color: '#ffffff',           // FIXED
+                border: isSelected ? '2px solid #212529' : '2px solid transparent', 
+                borderRadius: '6px', 
+                cursor: 'pointer', 
+                fontWeight: 'bold',
+                fontSize: '14px',
+                transition: 'all 0.2s ease',
+                boxShadow: isSelected ? '0 4px 8px rgba(0,0,0,0.2)' : '0 2px 4px rgba(0,0,0,0.1)',
+                opacity: isSelected ? 1 : 0.65,
+                transform: isSelected ? 'scale(1.02)' : 'scale(1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = 1;
+                e.currentTarget.style.transform = 'scale(1.02)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = isSelected ? 1 : 0.65;
+                e.currentTarget.style.transform = isSelected ? 'scale(1.02)' : 'scale(1)';
+              }}
+            >
+              {key} - {activeModelData[key].name}
+            </button>
+          );
+        })}
       </div>
 
       <div style={{ padding: '15px', backgroundColor: alertStyles.bg, borderLeft: `5px solid ${alertStyles.border}`, marginBottom: '20px', borderRadius: '0 4px 4px 0' }}>
