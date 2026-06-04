@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { ShieldAlert, Info, AlertTriangle } from 'lucide-react';
+import { ShieldAlert, Info, AlertTriangle, HelpCircle, X } from 'lucide-react';
 
 import clusterProfiles from '../data/cluster_summary_all_cities_with_imd.json';
 import { cityConfigs } from '../data/cityConfig';
 
 export default function Dashboard({ selectedCity, setSelectedCity, selectedCluster, setSelectedCluster, activeModel, setActiveModel }) {
   const [viewMode, setViewMode] = useState('harm'); 
+  const [showHelp, setShowHelp] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
   
   // 1. DYNAMIC DATA ROUTING: Safely extract data for the chosen city
   const cityData = clusterProfiles[selectedCity] || clusterProfiles["Birmingham"];
@@ -58,7 +60,107 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
     const alertStyles = getAlertStyles(currentLevel);
   return (
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
-      <h2>Police Analytical Dashboard</h2>
+      {/* ---------------- HEADER & ACTION BUTTONS ---------------- */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+        <h2 style={{ margin: 0 }}>UK Police Analytical Dashboard</h2>
+        
+        <div style={{ display: 'flex', gap: '10px' }}>
+          <button 
+            onClick={() => setShowAbout(true)}
+            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}
+          >
+            <Info size={18} /> About
+          </button>
+          <button 
+            onClick={() => setShowHelp(true)}
+            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}
+          >
+            <HelpCircle size={18} /> Guide
+          </button>
+        </div>
+      </div>
+
+      {/* ---------------- THE HELP MODAL OVERLAY ---------------- */}
+      {showHelp && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ width: '600px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '30px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)', position: 'relative', maxHeight: '80vh', overflowY: 'auto' }}>
+            
+            <button onClick={() => setShowHelp(false)} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}>
+              <X size={24} />
+            </button>
+
+            <h2 style={{ marginTop: 0, color: '#1a1a1a', borderBottom: '2px solid #eee', paddingBottom: '10px' }}>Quick Start Guide</h2>
+            
+            <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>1. The Map & Search</h4>
+            <p style={{ margin: '0 0 15px 0', fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
+              The interactive map allows you to view the exact boundaries of every deployment zone. Hover over any neighborhood to see its specific Harm Score and Deprivation (IMD) rating. Use the <strong>Search Bar</strong> in the top left to instantly jump to a specific neighborhood.
+            </p>
+
+            <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>2. Clustering Algorithms</h4>
+            <ul style={{ margin: '0 0 15px 0', fontSize: '14px', lineHeight: '1.6', color: '#444', paddingLeft: '20px' }}>
+              <li style={{ marginBottom: '8px' }}><strong>Balanced (K-Means):</strong> Groups neighborhoods based on their overall socio-economic and criminological profile. Use this for long-term strategic planning and understanding neighborhood archetypes.</li>
+              <li><strong>Hotspots (DBSCAN):</strong> Isolates hyper-dense areas of severe activity, ignoring background "noise." Use this for immediate, targeted tactical deployments and taskforce routing.</li>
+            </ul>
+
+            <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>3. Threat Levels</h4>
+            <p style={{ margin: '0 0 15px 0', fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
+              Deployment zones are color-coded based on severity: 
+              <span style={{ color: '#0F766E', fontWeight: 'bold' }}> Teal (Low)</span> indicates stable environments, 
+              <span style={{ color: '#B45309', fontWeight: 'bold' }}> Amber (Moderate)</span> requires elevated patrol visibility, and 
+              <span style={{ color: '#9F1239', fontWeight: 'bold' }}> Crimson (Critical)</span> indicates severe risk requiring multi-agency intervention.
+            </p>
+
+            <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>4. Chart Analysis</h4>
+            <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
+              The bottom charts break down the specific crime types driving the threat level for the selected cluster. Toggle between <strong>Harm %</strong> (the severity/cost of the crimes) and <strong>Volume %</strong> (the sheer number of incidents) to better allocate specific resources.
+            </p>
+
+          </div>
+        </div>
+      )}
+      {/* ---------------- THE ABOUT MODAL OVERLAY ---------------- */}
+      {showAbout && (
+        <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 1000, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ width: '500px', backgroundColor: '#ffffff', borderRadius: '8px', padding: '30px', boxShadow: '0 10px 25px rgba(0,0,0,0.2)', position: 'relative' }}>
+            
+            <button onClick={() => setShowAbout(false)} style={{ position: 'absolute', top: '20px', right: '20px', background: 'none', border: 'none', cursor: 'pointer', color: '#666' }}>
+              <X size={24} />
+            </button>
+
+            <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+              <ShieldAlert size={48} color="#0F766E" style={{ marginBottom: '10px' }} />
+              <h2 style={{ margin: 0, color: '#1a1a1a' }}>System Information</h2>
+              <p style={{ margin: '5px 0 0 0', color: '#666', fontSize: '14px' }}>4CBLW020 — Group 4</p>
+            </div>
+            
+            <div style={{ backgroundColor: '#f8f9fa', padding: '15px', borderRadius: '6px', border: '1px solid #eee', marginBottom: '20px' }}>
+              <h4 style={{ margin: '0 0 8px 0', color: '#333' }}>Project Overview</h4>
+              <p style={{ margin: 0, fontSize: '13px', lineHeight: '1.6', color: '#555' }}>
+                This web-based dashboard was developed as a final project by Sander Simson, Cem Vamik, Manan Goel, Hugo Kandjee Romero, Mark van Riet, and Bogdan Spătaru. 
+                <br/><br/>
+                The project explores how the volume and harm of crimes, combined with neighborhood deprivation data (IMD), can be used to better allocate police resources. By categorizing urban centers into distinct archetypes using K-Means and DBSCAN clustering algorithms, the tool aims to support data-driven policing rather than relying strictly on standard district boundaries.
+              </p>
+            </div>
+
+            <div style={{ marginBottom: '20px' }}>
+              <h4 style={{ margin: '0 0 8px 0', color: '#333' }}>Data Integration Sources</h4>
+              <ul style={{ margin: 0, fontSize: '13px', lineHeight: '1.6', color: '#555', paddingLeft: '20px' }}>
+                <li><strong>Geospatial Data:</strong> UK Office for National Statistics (ONS) LSOA Boundaries (2021).</li>
+                <li><strong>Criminology Data:</strong> Police.uk Street Level Crime & Cambridge Crime Harm Index.</li>
+                <li><strong>Socio-Economic Data:</strong> English Indices of Deprivation.</li>
+              </ul>
+            </div>
+
+            <div style={{ borderTop: '1px solid #eee', paddingTop: '15px', textAlign: 'center' }}>
+              <p style={{ margin: 0, fontSize: '11px', color: '#999', textTransform: 'uppercase', letterSpacing: '0.5px' }}>
+                <strong>Academic Disclaimer:</strong><br/>
+                This tool is an academic prototype designed to support human decision-making, not replace police judgment. 
+              </p>
+            </div>
+
+          </div>
+        </div>
+      )}
       
       {/* ---------------- CITY SELECTOR DROPDOWN ---------------- */}
       <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
@@ -117,8 +219,8 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
               onClick={() => setSelectedCluster(key)}
               style={{ 
                 padding: '10px 18px', 
-                backgroundColor: baseColor, // FIXED
-                color: '#ffffff',           // FIXED
+                backgroundColor: baseColor, 
+                color: '#ffffff',           
                 border: isSelected ? '2px solid #212529' : '2px solid transparent', 
                 borderRadius: '6px', 
                 cursor: 'pointer', 
