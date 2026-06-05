@@ -9,7 +9,15 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
   const [viewMode, setViewMode] = useState('harm'); 
   const [showHelp, setShowHelp] = useState(false);
   const [showAbout, setShowAbout] = useState(false);
-  
+  const [cityForecasts, setCityForecasts] = useState(null);
+
+  useEffect(() => {
+    fetch('/forecast_data.json')
+      .then(res => res.json())
+      .then(data => setCityForecasts(data))
+      .catch(err => console.error("Could not load forecasts:", err));
+  }, []);
+
   // 1. DYNAMIC DATA ROUTING: Safely extract data for the chosen city
   const cityData = clusterProfiles[selectedCity] || clusterProfiles["Birmingham"];
   
@@ -58,6 +66,20 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
 
     const currentLevel = getCalculatedLevel(activeClusterData);
     const alertStyles = getAlertStyles(currentLevel);
+
+    let dynamicForecastText = "Loading predictive models...";
+  if (cityForecasts && cityForecasts[selectedCity]) {
+    const highestSpike = cityForecasts[selectedCity][0]; // Index 0 is always the highest % change
+    
+    // Only throw an alert if the spike is larger than 3%
+    if (highestSpike && highestSpike.Pct_Change >= 3.0) {
+      // Clean up the text formatting (e.g. "BURGLARY" -> "Burglary")
+      const crimeName = highestSpike["Major Category"].toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+      dynamicForecastText = `⚠️ CITY-WIDE ESCALATION: Predictive models indicate a ${highestSpike.Pct_Change}% surge in ${crimeName} across the jurisdiction next month. Evaluate zone vulnerabilities.`;
+    } else {
+      dynamicForecastText = `✅ FORECAST STABLE: Models indicate no severe escalations (>3%) across the jurisdiction for the upcoming operational period.`;
+    }
+  }
   return (
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
       {/* ---------------- HEADER & ACTION BUTTONS ---------------- */}
@@ -250,8 +272,8 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
         <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '0 0 10px 0' }}>
           {alertStyles.icon} Emerging Risk & Forecast
         </h3>
-        {/* Added a fallback string just in case the JSON 'forecast' is empty */}
-        <p style={{ margin: 0, lineHeight: '1.5' }}>{activeClusterData.forecast || "Awaiting advanced analytical forecast for this sector."}</p>
+        {/* NEW: Injecting the Frontend-calculated forecast! */}
+        <p style={{ margin: 0, lineHeight: '1.5', fontWeight: '500' }}>{dynamicForecastText}</p>
       </div>
 
       <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
