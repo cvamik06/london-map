@@ -1,23 +1,57 @@
-# TODO
-drop down cities
+# UK Police Analytical Dashboard
 
-parity between models
+**Final Product — 4CBLW020 Addressing real-world crime and security problems with data science (Group 4)**
+
+An advanced, React-based spatial analysis dashboard designed to help law enforcement agencies allocate resources based on criminological reality rather than arbitrary district boundaries. 
+
+By categorizing urban centers into distinct archetypes using **Unsupervised Clustering (K-Means & DBSCAN)**, this tool balances crime volume, the Cambridge Crime Harm Index (CCHI), and neighborhood deprivation data (IMD) to support data-driven policing.
+
+![Dashboard Preview](./preview.png) *(Replace with an actual screenshot of your app)*
+
+---
+
+## The Team (Group 4)
+* Sander Simson
+* Cem Vamik
+* Manan Goel
+* Hugo Kandjee Romero
+* Mark van Riet
+* Bogdan Spătaru
+
+---
+
+## Key Features
+
+* **Dual-Algorithm Clustering Strategy:**
+  * **Balanced (K-Means):** Groups neighborhoods (LSOAs) based on overall socio-economic and criminological profiles for long-term strategic planning.
+  * **Hotspots (DBSCAN):** Isolates hyper-dense areas of severe activity, filtering out background urban "noise" for immediate tactical taskforce deployment.
+* **Predictive Forecasting:** Analyzes recent city-wide crime trends and dynamically injects predictive alerts (e.g., predicted surges in burglary or violence) into specific, highly-vulnerable neighborhood clusters.
+* **LSOA Search:** Custom Mapbox integration that calculates polygon centroids to automatically "fly to" searched LSOAs.
+
+---
+
+## Architecture & Tech Stack
+
+### Frontend Application
+* **Framework:** React (Vite)
+* **Mapping:** Mapbox GL JS (`react-map-gl/mapbox`)
+* **Data Visualization:** Recharts
+* **Icons & UI:** Lucide-React
 
 
+---
 
-# React + Vite
+## Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow these instructions to run the dashboard locally on your machine.
 
-Currently, two official plugins are available:
+### Prerequisites
+1. **Node.js** (v16 or higher)
+2. A free **Mapbox Access Token** (Sign up at [mapbox.com](https://www.mapbox.com/))
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Installation
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/your-username/uk-police-dashboard.git](https://github.com/your-username/uk-police-dashboard.git)
+   cd uk-police-dashboard
