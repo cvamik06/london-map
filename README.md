@@ -66,6 +66,7 @@ Make sure you have the following files present in your `public/` folder:
 - LSOA_Boundaries.geojson (The raw map shapes)
 - cluster_data.json (The Mapbox layer data)
 - forecast_data.json (The forecasting data)
+
 5.**Start the development server:**
     ```bash
     npm run dev
