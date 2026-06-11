@@ -53,7 +53,7 @@ Follow these instructions to run the dashboard locally on your machine.
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/cvamik06/london-map.git
-   cd uk-police-dashboard
+   cd london-map
 2. **Install dependencies:**
    ```bash
    npm install
