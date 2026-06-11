@@ -1,9 +1,27 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { ShieldAlert, Info, AlertTriangle, HelpCircle, X } from 'lucide-react';
+import { ShieldAlert, Info, HelpCircle, X } from 'lucide-react';
 
 import clusterProfiles from '../data/cluster_summary_all_cities_with_imd.json';
-import { cityConfigs } from '../data/cityConfig';
+
+// --- Sentence templates for different scenarios ---
+const forecastTemplates = {
+  increase: [
+    "⚠️ CITY-WIDE ESCALATION: Predictive models indicate a {pct}% surge in {crime} across the jurisdiction next month. Evaluate zone vulnerabilities.",
+    "⚠️ THREAT ELEVATED: Advanced forecasting detects a {pct}% upward trend in city-wide {crime}. Strategic resource reallocation advised.",
+    "⚠️ TACTICAL ALERT: Anticipated {pct}% increase in {crime} incidents for the upcoming operational period. Command attention required."
+  ],
+  decrease: [
+    "📉 THREAT DE-ESCALATION: Models predict a {pct}% reduction in {crime} across the jurisdiction. Current operational strategies are effective.",
+    "📉 POSITIVE TREND: Anticipated {pct}% drop in city-wide {crime} incidents for the upcoming operational period.",
+    "📉 RISK REDUCTION: Advanced forecasting shows a {pct}% decrease in {crime}. Monitor sectors for sustained improvement."
+  ],
+  stable: [
+    "✅ FORECAST STABLE: Models indicate no severe escalations (>3%) across the jurisdiction for the upcoming operational period.",
+    "✅ BASELINE NOMINAL: Primary crime indicators remain within standard operational thresholds. Maintain standard deployment.",
+    "✅ THREAT NEUTRAL: No significant city-wide spikes predicted. Continue current sector patrol protocols."
+  ]
+};
 
 export default function Dashboard({ selectedCity, setSelectedCity, selectedCluster, setSelectedCluster, activeModel, setActiveModel }) {
   const [viewMode, setViewMode] = useState('harm'); 
@@ -18,87 +36,211 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
       .catch(err => console.error("Could not load forecasts:", err));
   }, []);
 
-  // 1. DYNAMIC DATA ROUTING: Safely extract data for the chosen city
   const cityData = clusterProfiles[selectedCity] || clusterProfiles["Birmingham"];
-  
-  // 2. SAFETY RESET: If the user changes city or algorithm, jump back to Cluster C0
+  //Reset active cluster when city or model changes
   useEffect(() => {
     setSelectedCluster('C0');
   }, [selectedCity, activeModel, setSelectedCluster]);
 
-  // 3. Extract the active data for the UI based on the toggle and cluster selection
   const activeModelData = cityData?.[activeModel] || {};
   const activeClusterData = activeModelData[selectedCluster] || activeModelData['C0'];
 
-  const getAlertStyles = (level) => {
-    switch(level) {
-      case 'low': return { bg: '#e8f5e9', border: '#2e7d32', icon: <Info color="#2e7d32" /> };
-      case 'medium': return { bg: '#fff3e0', border: '#f57c00', icon: <AlertTriangle color="#f57c00" /> };
-      case 'critical': return { bg: '#ffebee', border: '#b71c1c', icon: <ShieldAlert color="#b71c1c" /> };
-      default: return { bg: '#ffebee', border: '#d32f2f', icon: <ShieldAlert color="#d32f2f" /> };
-    }
-  };
-
-  // Fallback loading state if data hasn't generated yet
   if (!activeClusterData) {
     return <div style={{ padding: '20px' }}>Loading city data...</div>;
   }
 
-//  const alertStyles = getAlertStyles(activeClusterData.alertLevel);
+  //uses cluster names to determine danger levels
+  const getCalculatedLevel = (cluster) => {
+    if (!cluster) return 'low';
+    const name = (cluster.name || "").toLowerCase();
 
-    // This reads the cluster's name and overrides the JSON if there is a mismatch
-    const getCalculatedLevel = (cluster) => {
-      if (!cluster) return 'low';
-      const name = (cluster.name || "").toLowerCase();
-
-      if (name.includes('critical') || name.includes('severe') || name.includes('high')) {
-        return 'critical';
-      }
-      if (name.includes('moderate') || name.includes('medium') || name.includes('elevated')) {
-        return 'medium';
-      }
-      if (name.includes('low') || name.includes('stable')) {
-        return 'low';
-      }
-      // Fallback to the JSON if the name doesn't contain any keywords
-      return cluster.alertLevel || 'low';
-    };
-
-    const currentLevel = getCalculatedLevel(activeClusterData);
-    const alertStyles = getAlertStyles(currentLevel);
-
-    let dynamicForecastText = "Loading predictive models...";
-  if (cityForecasts && cityForecasts[selectedCity]) {
-    const highestSpike = cityForecasts[selectedCity][0]; // Index 0 is always the highest % change
+    if (name.includes('critical') || name.includes('severe') || name.includes('high')) return 'critical';
+    if (name.includes('moderate') || name.includes('medium') || name.includes('elevated')) return 'medium';
+    if (name.includes('low') || name.includes('stable')) return 'low';
     
-    // Only throw an alert if the spike is larger than 3%
-    if (highestSpike && highestSpike.Pct_Change >= 3.0) {
-      // Clean up the text formatting (e.g. "BURGLARY" -> "Burglary")
-      const crimeName = highestSpike["Major Category"].toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
-      dynamicForecastText = `⚠️ CITY-WIDE ESCALATION: Predictive models indicate a ${highestSpike.Pct_Change}% surge in ${crimeName} across the jurisdiction next month. Evaluate zone vulnerabilities.`;
-    } else {
-      dynamicForecastText = `✅ FORECAST STABLE: Models indicate no severe escalations (>3%) across the jurisdiction for the upcoming operational period.`;
+    return cluster.alertLevel || 'low';
+  };
+
+  // --- Randomized forecast text based on severity  ---
+  const dynamicForecastText = useMemo(() => {
+    // Separate Manchester
+    if (selectedCity === "Manchester") {
+      return "ℹ️ SYSTEM NOTICE: Forecasting for Manchester is unavailable as the official dataset provided contains missing information for the city.";
     }
-  }
+
+    
+    if (!cityForecasts || !cityForecasts[selectedCity]) return "Loading predictive models...";
+
+    const forecasts = cityForecasts[selectedCity];
+    const maxIncrease = forecasts[0]; // Top of the list (highest positive number)
+    const maxDecrease = forecasts[forecasts.length - 1]; // Bottom of the list (lowest negative number)
+
+    let type = 'stable';
+    let targetCrime = null;
+
+    // Check if we have a major spike first
+    if (maxIncrease && maxIncrease.Pct_Change >= 3.0) {
+      type = 'increase';
+      targetCrime = maxIncrease;
+    } 
+    // If no spike, check if we have a major drop
+    else if (maxDecrease && maxDecrease.Pct_Change <= -3.0) {
+      type = 'decrease';
+      targetCrime = maxDecrease;
+    }
+
+    // Pick a random sentence from the correct pool
+    const pool = forecastTemplates[type];
+    const randomIdx = Math.floor(Math.random() * pool.length);
+    let text = pool[randomIdx];
+
+    // Swap out the placeholder words for the actual math
+    if (targetCrime) {
+      const crimeName = targetCrime["Major Category"].toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
+      text = text.replace('{pct}', Math.abs(targetCrime.Pct_Change)).replace('{crime}', crimeName);
+    }
+
+    return text;
+  }, [selectedCity, cityForecasts]); // only re-runs when the city or data changes
+
+
   return (
     <div style={{ padding: '20px', fontFamily: 'system-ui, sans-serif', maxWidth: '800px' }}>
+      
       {/* ---------------- HEADER & ACTION BUTTONS ---------------- */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <h2 style={{ margin: 0 }}>UK Police Analytical Dashboard</h2>
         
         <div style={{ display: 'flex', gap: '10px' }}>
-          <button 
-            onClick={() => setShowAbout(true)}
-            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}
-          >
+          <button onClick={() => setShowAbout(true)} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}>
             <Info size={18} /> About
           </button>
-          <button 
-            onClick={() => setShowHelp(true)}
-            style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}
-          >
+          <button onClick={() => setShowHelp(true)} style={{ display: 'flex', alignItems: 'center', gap: '6px', padding: '6px 12px', backgroundColor: '#f8f9fa', border: '1px solid #dee2e6', borderRadius: '4px', cursor: 'pointer', color: '#495057', fontWeight: 'bold' }}>
             <HelpCircle size={18} /> Guide
           </button>
+        </div>
+      </div>
+
+      {/* ---------------- CITY SELECTOR DROPDOWN ---------------- */}
+      <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
+        <strong style={{ color: '#495057' }}>Select Jurisdiction:</strong>
+        <select 
+          value={selectedCity} 
+          onChange={(e) => setSelectedCity(e.target.value)}
+          style={{ padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', backgroundColor: '#f8f9fa' }}
+        >
+          {Object.keys(clusterProfiles).map(city => (
+            <option key={city} value={city}>{city} </option>
+          ))}
+        </select>
+      </div>
+
+      {/* ---------------- THE MODEL TOGGLE ---------------- */}
+      <div style={{ marginBottom: '25px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', display: 'flex', gap: '15px', alignItems: 'center' }}>
+        <strong style={{ color: '#495057' }}>Clustering Type:</strong>
+        <div style={{ display: 'flex', backgroundColor: '#e9ecef', borderRadius: '6px', padding: '4px' }}>
+          <button 
+            onClick={() => setActiveModel('kmeans')}
+            style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'kmeans' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'kmeans' ? 'bold' : 'normal', boxShadow: activeModel === 'kmeans' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
+          >
+            Balanced
+          </button>
+          <button 
+            onClick={() => setActiveModel('dbscan')}
+            style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'dbscan' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'dbscan' ? 'bold' : 'normal', boxShadow: activeModel === 'dbscan' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
+          >
+           Hotspots
+          </button>
+        </div>
+      </div>
+
+      {/* ---------------- UNIFIED CHART RENDER ---------------- */}
+      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px', flexWrap: 'wrap' }}>
+        {Object.keys(activeModelData).map(key => {
+          const isSelected = selectedCluster === key;
+          const level = getCalculatedLevel(activeModelData[key]); 
+
+          let baseColor;
+          if (level === 'low') baseColor = '#0F766E'; 
+          else if (level === 'medium') baseColor = '#B45309'; 
+          else baseColor = '#9F1239'; 
+
+          return (
+            <button 
+              key={key} 
+              onClick={() => setSelectedCluster(key)}
+              style={{ 
+                padding: '10px 18px', 
+                backgroundColor: baseColor, 
+                color: '#ffffff',           
+                border: isSelected ? '2px solid #212529' : '2px solid transparent', 
+                borderRadius: '6px', 
+                cursor: 'pointer', 
+                fontWeight: 'bold',
+                fontSize: '14px',
+                transition: 'all 0.2s ease',
+                boxShadow: isSelected ? '0 4px 8px rgba(0,0,0,0.2)' : '0 2px 4px rgba(0,0,0,0.1)',
+                opacity: isSelected ? 1 : 0.65,
+                transform: isSelected ? 'scale(1.02)' : 'scale(1)'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.opacity = 1;
+                e.currentTarget.style.transform = 'scale(1.02)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.opacity = isSelected ? 1 : 0.65;
+                e.currentTarget.style.transform = isSelected ? 'scale(1.02)' : 'scale(1)';
+              }}
+            >
+              {key} - {activeModelData[key].name}
+            </button>
+          );
+        })}
+      </div>
+
+      {/* --- CONSISTENT CITY-WIDE FORECAST PANEL --- */}
+      <div style={{ padding: '15px', backgroundColor: '#f4f6f8', borderLeft: `5px solid #475569`, marginBottom: '20px', borderRadius: '0 4px 4px 0', boxShadow: '0 1px 3px rgba(0,0,0,0.05)' }}>
+        <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '0 0 10px 0', color: '#334155' }}>
+          <Info color="#475569" size={20} /> City-Wide Predictive Forecast
+        </h3>
+        <p style={{ margin: 0, lineHeight: '1.5', fontWeight: '500', color: '#1e293b' }}>{dynamicForecastText}</p>
+      </div>
+
+      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <div style={{ flex: '1 1 400px', height: '350px', backgroundColor: '#fafafa', padding: '15px', borderRadius: '8px' }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div>
+              <h4 style={{ margin: '0 0 5px 0' }}>Criminological Profile</h4>
+              <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>Total CCHI Harm per 1000: <strong>{activeClusterData.harmPer1000.toLocaleString()}</strong></p>
+            </div>
+            <div style={{ display: 'flex', backgroundColor: '#e0e0e0', borderRadius: '4px', padding: '2px' }}>
+              <button onClick={() => setViewMode('harm')} style={{ padding: '4px 8px', border: 'none', borderRadius: '2px', cursor: 'pointer', backgroundColor: viewMode === 'harm' ? 'white' : 'transparent', fontWeight: viewMode === 'harm' ? 'bold' : 'normal' }}>Harm %</button>
+              <button onClick={() => setViewMode('volume')} style={{ padding: '4px 8px', border: 'none', borderRadius: '2px', cursor: 'pointer', backgroundColor: viewMode === 'volume' ? 'white' : 'transparent', fontWeight: viewMode === 'volume' ? 'bold' : 'normal' }}>Volume %</button>
+            </div>
+          </div>
+          <ResponsiveContainer width="100%" height="80%" style={{ marginTop: '15px' }}>
+            <BarChart data={activeClusterData.crimes} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis type="number" unit="%" domain={[0, 100]} />
+              <YAxis dataKey="name" type="category" width={120} tick={{fontSize: 11}} />
+              <Tooltip />
+              <Bar dataKey={viewMode} fill={viewMode === 'harm' ? "#d32f2f" : "#005b9f"} name={viewMode === 'harm' ? "Harm Contribution" : "Volume Contribution"} animationDuration={500} />
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+
+        <div style={{ flex: '1 1 300px', height: '350px', backgroundColor: '#fafafa', padding: '15px', borderRadius: '8px' }}>
+          <h4 style={{ margin: '0 0 5px 0' }}>Socio-Economic Context (IMD)</h4>
+          <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>Higher score = Higher deprivation</p>
+          <ResponsiveContainer width="100%" height="80%" style={{ marginTop: '15px' }}>
+            <BarChart data={activeClusterData.imd} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" tick={{fontSize: 12}} />
+              <YAxis />
+              <Tooltip />
+              <Bar dataKey="value" fill="#4caf50" name="Score" />
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
 
@@ -183,136 +325,6 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
           </div>
         </div>
       )}
-      
-      {/* ---------------- CITY SELECTOR DROPDOWN ---------------- */}
-      <div style={{ marginBottom: '20px', display: 'flex', alignItems: 'center', gap: '15px' }}>
-        <strong style={{ color: '#495057' }}>Select Jurisdiction:</strong>
-        <select 
-          value={selectedCity} 
-          onChange={(e) => setSelectedCity(e.target.value)}
-          style={{ padding: '8px 12px', borderRadius: '4px', border: '1px solid #ccc', fontSize: '16px', fontWeight: 'bold', cursor: 'pointer', backgroundColor: '#f8f9fa' }}
-        >
-          {/* Dynamically list cities based on the JSON keys */}
-          {Object.keys(clusterProfiles).map(city => (
-            <option key={city} value={city}>{city} </option>
-          ))}
-        </select>
-      </div>
-
-      {/* ---------------- THE MODEL TOGGLE ---------------- */}
-      <div style={{ marginBottom: '25px', padding: '15px', backgroundColor: '#f8f9fa', borderRadius: '8px', border: '1px solid #e9ecef', display: 'flex', gap: '15px', alignItems: 'center' }}>
-        <strong style={{ color: '#495057' }}>Clustering Type:</strong>
-        <div style={{ display: 'flex', backgroundColor: '#e9ecef', borderRadius: '6px', padding: '4px' }}>
-          <button 
-            onClick={() => setActiveModel('kmeans')}
-            style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'kmeans' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'kmeans' ? 'bold' : 'normal', boxShadow: activeModel === 'kmeans' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
-          >
-            Balanced
-          </button>
-          <button 
-            onClick={() => setActiveModel('dbscan')}
-            style={{ padding: '8px 16px', border: 'none', borderRadius: '4px', cursor: 'pointer', transition: '0.2s', backgroundColor: activeModel === 'dbscan' ? '#ffffff' : 'transparent', fontWeight: activeModel === 'dbscan' ? 'bold' : 'normal', boxShadow: activeModel === 'dbscan' ? '0 2px 4px rgba(0,0,0,0.05)' : 'none' }}
-          >
-           Hotspots
-          </button>
-        </div>
-      </div>
-
-
-      {/* ---------------- UNIFIED CHART RENDER ---------------- */}
-      {/* Dynamic Cluster Buttons based on what the active model contains */}
-      <div style={{ display: 'flex', gap: '10px', marginBottom: '20px', flexWrap: 'wrap' }}>
-        {Object.keys(activeModelData).map(key => {
-          const isSelected = selectedCluster === key;
-          //use calculated level from name
-          const level = getCalculatedLevel(activeModelData[key]); 
-
-          let baseColor;
-          if (level === 'low') {
-            baseColor = '#0F766E'; // Deep Slate-Teal
-          } else if (level === 'medium') {
-            baseColor = '#B45309'; // Burnt Amber
-          } else { 
-            baseColor = '#9F1239'; // Dark Crimson
-          }
-          return (
-            <button 
-              key={key} 
-              onClick={() => setSelectedCluster(key)}
-              style={{ 
-                padding: '10px 18px', 
-                backgroundColor: baseColor, 
-                color: '#ffffff',           
-                border: isSelected ? '2px solid #212529' : '2px solid transparent', 
-                borderRadius: '6px', 
-                cursor: 'pointer', 
-                fontWeight: 'bold',
-                fontSize: '14px',
-                transition: 'all 0.2s ease',
-                boxShadow: isSelected ? '0 4px 8px rgba(0,0,0,0.2)' : '0 2px 4px rgba(0,0,0,0.1)',
-                opacity: isSelected ? 1 : 0.65,
-                transform: isSelected ? 'scale(1.02)' : 'scale(1)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.opacity = 1;
-                e.currentTarget.style.transform = 'scale(1.02)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.opacity = isSelected ? 1 : 0.65;
-                e.currentTarget.style.transform = isSelected ? 'scale(1.02)' : 'scale(1)';
-              }}
-            >
-              {key} - {activeModelData[key].name}
-            </button>
-          );
-        })}
-      </div>
-
-      <div style={{ padding: '15px', backgroundColor: alertStyles.bg, borderLeft: `5px solid ${alertStyles.border}`, marginBottom: '20px', borderRadius: '0 4px 4px 0' }}>
-        <h3 style={{ display: 'flex', alignItems: 'center', gap: '8px', margin: '0 0 10px 0' }}>
-          {alertStyles.icon} Emerging Risk & Forecast
-        </h3>
-        {/* NEW: Injecting the Frontend-calculated forecast! */}
-        <p style={{ margin: 0, lineHeight: '1.5', fontWeight: '500' }}>{dynamicForecastText}</p>
-      </div>
-
-      <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
-        <div style={{ flex: '1 1 400px', height: '350px', backgroundColor: '#fafafa', padding: '15px', borderRadius: '8px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-            <div>
-              <h4 style={{ margin: '0 0 5px 0' }}>Criminological Profile</h4>
-              <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>Total CCHI Harm per 1000: <strong>{activeClusterData.harmPer1000.toLocaleString()}</strong></p>
-            </div>
-            <div style={{ display: 'flex', backgroundColor: '#e0e0e0', borderRadius: '4px', padding: '2px' }}>
-              <button onClick={() => setViewMode('harm')} style={{ padding: '4px 8px', border: 'none', borderRadius: '2px', cursor: 'pointer', backgroundColor: viewMode === 'harm' ? 'white' : 'transparent', fontWeight: viewMode === 'harm' ? 'bold' : 'normal' }}>Harm %</button>
-              <button onClick={() => setViewMode('volume')} style={{ padding: '4px 8px', border: 'none', borderRadius: '2px', cursor: 'pointer', backgroundColor: viewMode === 'volume' ? 'white' : 'transparent', fontWeight: viewMode === 'volume' ? 'bold' : 'normal' }}>Volume %</button>
-            </div>
-          </div>
-          <ResponsiveContainer width="100%" height="80%" style={{ marginTop: '15px' }}>
-            <BarChart data={activeClusterData.crimes} layout="vertical" margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis type="number" unit="%" domain={[0, 100]} />
-              <YAxis dataKey="name" type="category" width={120} tick={{fontSize: 11}} />
-              <Tooltip />
-              <Bar dataKey={viewMode} fill={viewMode === 'harm' ? "#d32f2f" : "#005b9f"} name={viewMode === 'harm' ? "Harm Contribution" : "Volume Contribution"} animationDuration={500} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-
-        <div style={{ flex: '1 1 300px', height: '350px', backgroundColor: '#fafafa', padding: '15px', borderRadius: '8px' }}>
-          <h4 style={{ margin: '0 0 5px 0' }}>Socio-Economic Context (IMD)</h4>
-          <p style={{ fontSize: '12px', color: '#666', margin: 0 }}>Higher score = Higher deprivation</p>
-          <ResponsiveContainer width="100%" height="80%" style={{ marginTop: '15px' }}>
-            <BarChart data={activeClusterData.imd} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" tick={{fontSize: 12}} />
-              <YAxis />
-              <Tooltip />
-              <Bar dataKey="value" fill="#4caf50" name="Score" />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-      </div>
     </div>
   );
 }

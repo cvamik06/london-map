@@ -69,8 +69,8 @@ export default function MapView({ selectedCity, selectedCluster, activeModel }) 
     // Trigger the Mapbox camera animation
     mapRef.current?.flyTo({
       center: [centerLng, centerLat],
-      zoom: 14, // Zoom in tight on the specific neighborhood
-      duration: 1500 // 1.5 second smooth animation
+      zoom: 14, 
+      duration: 1500 
     });
 
     setHoverInfo({ longitude: centerLng, latitude: centerLat, properties: props });
