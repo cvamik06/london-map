@@ -6,8 +6,7 @@ An advanced, React-based spatial analysis dashboard designed to help law enforce
 
 By categorizing urban centers into distinct archetypes using **Unsupervised Clustering (K-Means & DBSCAN)**, this tool balances crime volume, the Cambridge Crime Harm Index (CCHI), and neighborhood deprivation data (IMD) to support data-driven policing.
 
-![Dashboard Preview](./preview.png) *(Replace with an actual screenshot of your app)*
-
+![Dashboard Preview](./preview.png)
 ---
 
 ## The Team (Group 4)
@@ -53,5 +52,21 @@ Follow these instructions to run the dashboard locally on your machine.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/your-username/uk-police-dashboard.git](https://github.com/your-username/uk-police-dashboard.git)
+   git clone https://github.com/cvamik06/london-map.git
    cd uk-police-dashboard
+2. **Install dependencies:**
+   ```bash
+   npm install
+
+3. **Create a .env file in the root directory and add your Mapbox token:**
+   ```bash
+   VITE_MAPBOX_TOKEN=pk.your_mapbox_token_here
+4. **Verify data files:**
+Make sure you have the following files present in your `public/` folder:
+- LSOA_Boundaries.geojson (The raw map shapes)
+- cluster_data.json (The Mapbox layer data)
+- forecast_data.json (The forecasting data)
+5.**Start the development server:**
+    ```bash
+    npm run dev
+The application will typically be available at http://localhost:5173.
