@@ -68,6 +68,7 @@ Make sure you have the following files present in your `public/` folder:
 - forecast_data.json (The forecasting data)
 
 5.**Start the development server:**
-    ```bash
-    npm run dev
+  ```bash
+  npm run dev
+
 The application will typically be available at http://localhost:5173.
