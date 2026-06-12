@@ -275,8 +275,13 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
             </p>
 
             <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>4. Chart Analysis</h4>
-            <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
+            <p style={{ margin: '0 0 15px 0', fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
               The bottom charts break down the specific crime types driving the threat level for the selected cluster. Toggle between <strong>Harm %</strong> (the severity/cost of the crimes) and <strong>Volume %</strong> (the sheer number of incidents) to better allocate specific resources.
+            </p>
+
+            <h4 style={{ color: '#0F766E', marginBottom: '5px' }}>5. Predictive Forecasting</h4>
+            <p style={{ margin: 0, fontSize: '14px', lineHeight: '1.6', color: '#444' }}>
+              The intelligence panel displays 30-day city-wide predictive models based on recent crime trends. It automatically flags significant expected escalations or decreases ({'>'}3%) in specific crime categories, allowing authorities to shift from reactive policing to proactive resource allocation.
             </p>
 
           </div>
@@ -302,7 +307,7 @@ export default function Dashboard({ selectedCity, setSelectedCity, selectedClust
               <p style={{ margin: 0, fontSize: '13px', lineHeight: '1.6', color: '#555' }}>
                 This web-based dashboard was developed as a final project by Sander Simson, Cem Vamik, Manan Goel, Hugo Kandjee Romero, Mark van Riet, and Bogdan Spătaru. 
                 <br/><br/>
-                The project explores how the volume and harm of crimes, combined with neighborhood deprivation data (IMD), can be used to better allocate police resources. By categorizing urban centers into distinct archetypes using K-Means and DBSCAN clustering algorithms, the tool aims to support data-driven policing rather than relying strictly on standard district boundaries.
+                The project explores how the volume and harm of crimes, combined with neighborhood deprivation data (IMD), can be used to better allocate police resources. By categorizing urban centers into distinct archetypes using K-Means and DBSCAN clustering algorithms, the tool aims to support data-driven policing rather than relying strictly on standard district boundaries. It also uses supervised machine-learning to provide city wide monthly forecast for crime.
               </p>
             </div>
 
